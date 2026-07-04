@@ -1,0 +1,25 @@
+# Saída do build (gerada automaticamente)
+/public/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Ferramentas / SO
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log

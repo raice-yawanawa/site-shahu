@@ -1,0 +1,64 @@
+name: Build e Deploy
+
+# Publica o site a cada push na main. Também roda em pull requests apenas para validar
+# o build (sem publicar).
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Instalar dependências
+        run: python -m pip install -e ".[dev]"
+
+      - name: Testes e lint
+        run: |
+          ruff check .
+          pytest
+
+      - name: Gerar site estático
+        run: python scripts/build.py
+
+      - name: Publicar artefato (GitHub Pages)
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+  # Deploy no GitHub Pages (opção padrão deste workflow).
+  # ALTERNATIVA Cloudflare Pages: em vez deste job, use a integração nativa do
+  # Cloudflare Pages apontando para o repositório, com:
+  #   Build command:       pip install -e . && python scripts/build.py
+  #   Build output dir:    public
+  # (nesse caso, remova o job "deploy" abaixo e o upload-pages-artifact acima).
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy no GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

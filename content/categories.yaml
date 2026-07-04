@@ -1,0 +1,22 @@
+# Estrutura da navegação (sidebar). Cada categoria tem um slug (sem acentos/espaços)
+# usado nas URLs e nas peças, e um name de exibição. Ver docs/CONTEUDO.md.
+
+- slug: joias
+  name: Joias
+  subcategories:
+    - { slug: colares, name: Colares }
+    - { slug: brincos, name: Brincos }
+    - { slug: pulseiras, name: Pulseiras }
+    - { slug: aneis, name: Anéis }
+    - { slug: amarradores, name: Amarradores }
+
+- slug: vestuario
+  name: Vestuário
+  subcategories:
+    - { slug: vestidos, name: Vestidos }
+    - { slug: cintos, name: Cintos }
+
+- slug: arte
+  name: Arte
+  subcategories:
+    - { slug: gravuras, name: Gravuras }

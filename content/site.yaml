@@ -1,0 +1,43 @@
+# Configurações gerais e textos do site. Editável pela autora (ver docs/CONTEUDO.md).
+
+# base_url: deixe vazio para deploy na raiz de um domínio (ex.: Cloudflare Pages).
+# Para GitHub Pages em subcaminho, use algo como "/nome-do-repo".
+base_url: ""
+
+brand:
+  name: "SHAHU RAUTIHU KENEYA"
+  tagline: "Ancestralidade em cada detalhe"
+  logo: "/assets/images/logo/logo-shahu.jpeg"
+
+contact:
+  # Número do WhatsApp em formato internacional, só dígitos (DDI + DDD + número).
+  # PLACEHOLDER — substituir pelo número real da autora.
+  whatsapp: "5599999999999"
+  # Handle do Instagram, sem @. PLACEHOLDER — substituir pelo real.
+  instagram: "shahu.rautihu.keneya"
+
+home:
+  hero_title: "Arte indígena feita à mão"
+  hero_subtitle: "Cada peça carrega a ancestralidade e os grafismos do meu povo."
+  # Imagem grande de abertura (opcional). Coloque o arquivo em assets/images/brand/.
+  hero_image: "/assets/images/brand/hero.jpg"
+
+  # História da marca (Markdown simples é aceito nos parágrafos).
+  story_title: "A história por trás da SHAHU"
+  story_paragraphs:
+    - "A SHAHU RAUTIHU KENEYA nasce do desejo de manter viva a arte e a ancestralidade
+       do meu povo. Cada colar, brinco, pulseira e gravura é feito à mão, com técnicas
+       passadas de geração em geração."
+    - "Trabalho com sementes, fibras e grafismos que contam histórias — de cura, de
+       floresta, de resistência. Ao levar uma peça, você apoia diretamente a arte
+       indígena e ajuda a preservar esse conhecimento."
+    - "Este é um trabalho voluntário de apoio: cada compra fortalece a nossa cultura."
+
+  # Fotos da autora e de peças para a seção de história (assets/images/brand/).
+  author_photos:
+    - { src: "/assets/images/brand/autora-1.jpg", alt: "A artesã trabalhando em uma peça" }
+    - { src: "/assets/images/brand/pecas-1.jpg", alt: "Peças de artesanato em exposição" }
+
+  featured_title: "Peças em destaque"
+  cta_title: "Fale comigo"
+  cta_text: "Tem interesse em uma peça ou quer uma encomenda especial? Me chame!"

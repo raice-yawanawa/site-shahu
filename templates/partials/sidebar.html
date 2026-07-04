@@ -1,0 +1,32 @@
+{% set active_cat = category.slug if category is defined and category else None %}
+{% set active_sub = subcategory.slug if subcategory is defined and subcategory else None %}
+<aside class="sidebar" data-sidebar>
+  <nav class="sidebar__nav" aria-label="Categorias">
+    <ul class="menu">
+      {% for c in categories %}
+      <li class="menu__item">
+        <details class="menu__group" {% if active_cat == c.slug %}open{% endif %}>
+          <summary class="menu__summary">
+            <span>{{ c.name }}</span>
+            <svg class="menu__chevron" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+              <path fill="none" stroke="currentColor" stroke-width="2" d="m6 9 6 6 6-6"/>
+            </svg>
+          </summary>
+          <ul class="submenu">
+            <li>
+              <a class="submenu__link submenu__link--all{{ ' is-active' if active_cat == c.slug and not active_sub else '' }}"
+                 href="{{ url(c.url) }}">Ver tudo</a>
+            </li>
+            {% for s in c.subcategories %}
+            <li>
+              <a class="submenu__link{{ ' is-active' if active_sub == s.slug else '' }}"
+                 href="{{ url(s.url) }}">{{ s.name }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </details>
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</aside>

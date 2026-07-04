@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %}{{ site.brand_name }} — {{ site.tagline }}{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <div class="hero__bg" style="background-image:url('{{ url(home.hero_image) }}')"></div>
+  <div class="hero__inner">
+    <img class="hero__logo" src="{{ url(site.logo) }}" alt="{{ site.brand_name }}">
+    <h1 class="hero__title">{{ home.hero_title }}</h1>
+    <p class="hero__subtitle">{{ home.hero_subtitle }}</p>
+    <div class="hero__cta">
+      <a class="btn btn--whatsapp" href="{{ site.contact.whatsapp_url }}" target="_blank" rel="noopener">Falar no WhatsApp</a>
+      <a class="btn btn--outline" href="{{ site.contact.instagram_url }}" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+</section>
+
+<section class="story">
+  <h2 class="section-title">{{ home.story_title }}</h2>
+  <div class="story__grid">
+    <div class="story__text">
+      {% for p in home.story_paragraphs %}
+      <p>{{ p }}</p>
+      {% endfor %}
+    </div>
+    <div class="story__photos">
+      {% for photo in home.author_photos %}
+      <figure class="story__photo">
+        <img src="{{ url(photo.src) }}" alt="{{ photo.alt }}" loading="lazy"
+             onerror="this.src='{{ url('/static/img/placeholder.svg') }}'">
+      </figure>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% if featured_products %}
+<section class="featured">
+  <h2 class="section-title">{{ home.featured_title }}</h2>
+  <div class="grid">
+    {% for product in featured_products %}
+      {% include "partials/product_card.html" %}
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+<section class="contact-cta">
+  <h2>{{ home.cta_title }}</h2>
+  <p>{{ home.cta_text }}</p>
+  <div class="hero__cta">
+    <a class="btn btn--whatsapp" href="{{ site.contact.whatsapp_url }}" target="_blank" rel="noopener">WhatsApp</a>
+    <a class="btn btn--outline" href="{{ site.contact.instagram_url }}" target="_blank" rel="noopener">Instagram</a>
+  </div>
+</section>
+{% endblock %}

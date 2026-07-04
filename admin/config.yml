@@ -1,0 +1,109 @@
+# Configuração do painel de conteúdo (Sveltia CMS / compatível com Decap CMS).
+# Documentação: https://github.com/sveltia/sveltia-cms
+
+backend:
+  name: github
+  # >>> PREENCHER com o repositório no GitHub, no formato "usuario/repositorio".
+  repo: OWNER/REPO
+  branch: main
+  # Autenticação: por padrão o Sveltia usa o fluxo de OAuth do GitHub. Se hospedar em
+  # Cloudflare Pages/Netlify, siga o guia do Sveltia para configurar o provedor de OAuth
+  # (ex.: um pequeno Worker/Function gratuito) e descomente/ajuste 'base_url' se preciso.
+  # base_url: https://SEU-PROVEDOR-OAUTH
+
+# Idioma do painel
+locale: pt
+
+# Onde ficam as imagens enviadas pelo painel (padrão: imagens da marca).
+media_folder: "assets/images/brand"
+public_folder: "/assets/images/brand"
+
+collections:
+  # ------------------------------------------------------------------ Peças
+  - name: products
+    label: "Peças"
+    label_singular: "Peça"
+    description: "Produtos do catálogo (joias, vestuário, arte)."
+    folder: "content/products"
+    create: true
+    slug: "{{slug}}"
+    format: frontmatter
+    # Imagens das peças vão para uma pasta própria.
+    media_folder: "/assets/images/products"
+    public_folder: "/assets/images/products"
+    fields:
+      - { label: "Nome", name: "name", widget: "string" }
+      - { label: "Preço (R$) — deixe vazio para 'sob consulta'", name: "price", widget: "number", required: false, value_type: "float", step: 0.01, min: 0 }
+      - label: "Categoria"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "Joias", value: "joias" }
+          - { label: "Vestuário", value: "vestuario" }
+          - { label: "Arte", value: "arte" }
+      - label: "Subcategoria"
+        name: "subcategory"
+        widget: "select"
+        hint: "Deve pertencer à categoria escolhida (ver guia de conteúdo)."
+        options:
+          - { label: "Colares (Joias)", value: "colares" }
+          - { label: "Brincos (Joias)", value: "brincos" }
+          - { label: "Pulseiras (Joias)", value: "pulseiras" }
+          - { label: "Anéis (Joias)", value: "aneis" }
+          - { label: "Amarradores (Joias)", value: "amarradores" }
+          - { label: "Vestidos (Vestuário)", value: "vestidos" }
+          - { label: "Cintos (Vestuário)", value: "cintos" }
+          - { label: "Gravuras (Arte)", value: "gravuras" }
+      - label: "Fotos"
+        name: "images"
+        widget: "list"
+        required: false
+        field: { label: "Foto", name: "image", widget: "image" }
+      - { label: "Disponível", name: "available", widget: "boolean", default: true }
+      - { label: "Destaque na home", name: "featured", widget: "boolean", default: false }
+      - { label: "Descrição", name: "body", widget: "markdown" }
+
+  # ------------------------------------------------------ Configurações do site
+  - name: "settings"
+    label: "Configurações do site"
+    files:
+      - name: "site"
+        label: "Site, contato e página inicial"
+        file: "content/site.yaml"
+        fields:
+          - { label: "Base URL (deixe vazio para domínio na raiz)", name: "base_url", widget: "string", required: false }
+          - label: "Marca"
+            name: "brand"
+            widget: "object"
+            fields:
+              - { label: "Nome", name: "name", widget: "string" }
+              - { label: "Slogan", name: "tagline", widget: "string" }
+              - { label: "Logo", name: "logo", widget: "image" }
+          - label: "Contato"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "WhatsApp (só dígitos, com DDI. Ex.: 5511999999999)", name: "whatsapp", widget: "string" }
+              - { label: "Instagram (sem @)", name: "instagram", widget: "string" }
+          - label: "Página inicial"
+            name: "home"
+            widget: "object"
+            fields:
+              - { label: "Título do topo", name: "hero_title", widget: "string" }
+              - { label: "Subtítulo do topo", name: "hero_subtitle", widget: "string" }
+              - { label: "Imagem do topo", name: "hero_image", widget: "image", required: false }
+              - { label: "Título da história", name: "story_title", widget: "string" }
+              - label: "Parágrafos da história"
+                name: "story_paragraphs"
+                widget: "list"
+                field: { label: "Parágrafo", name: "paragrafo", widget: "text" }
+              - label: "Fotos da autora/peças"
+                name: "author_photos"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Imagem", name: "src", widget: "image" }
+                  - { label: "Texto alternativo", name: "alt", widget: "string" }
+              - { label: "Título dos destaques", name: "featured_title", widget: "string" }
+              - { label: "Título do bloco de contato", name: "cta_title", widget: "string" }
+              - { label: "Texto do bloco de contato", name: "cta_text", widget: "text" }

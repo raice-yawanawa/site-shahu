@@ -1,0 +1,23 @@
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <img src="{{ url(site.logo) }}" alt="{{ site.brand_name }}" width="64" height="64">
+      <div>
+        <strong>{{ site.brand_name }}</strong>
+        <span>{{ site.tagline }}</span>
+      </div>
+    </div>
+
+    <div class="footer__contact">
+      <a class="btn btn--whatsapp" href="{{ site.contact.whatsapp_url }}" target="_blank" rel="noopener">
+        WhatsApp
+      </a>
+      <a class="btn btn--outline" href="{{ site.contact.instagram_url }}" target="_blank" rel="noopener">
+        Instagram
+      </a>
+    </div>
+  </div>
+  <p class="footer__note">
+    &copy; {{ current_year }} {{ site.brand_name }} · Projeto voluntário de apoio à arte indígena
+  </p>
+</footer>

@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% set sub = category.subcategory(product.subcategory) if category else None %}
+{% set gallery = product.images if product.images else [product.cover] %}
+{% block title %}{{ product.name }} — {{ site.brand_name }}{% endblock %}
+{% block description %}{{ product.name }} — {{ site.tagline }}.{% endblock %}
+
+{% block content %}
+<nav class="breadcrumb" aria-label="Você está em">
+  <a href="{{ url('/') }}">Início</a>
+  {% if category %}
+  <span>/</span>
+  <a href="{{ url(category.url) }}">{{ category.name }}</a>
+  {% endif %}
+  {% if sub %}
+  <span>/</span>
+  <a href="{{ url(sub.url) }}">{{ sub.name }}</a>
+  {% endif %}
+  <span>/</span>
+  <span aria-current="page">{{ product.name }}</span>
+</nav>
+
+<article class="product">
+  <div class="product__gallery">
+    {% for img in gallery %}
+    <figure class="product__photo">
+      <img src="{{ url(img) }}" alt="{{ product.name }}"
+           onerror="this.src='{{ url('/static/img/placeholder.svg') }}'">
+    </figure>
+    {% endfor %}
+  </div>
+
+  <div class="product__info">
+    <h1 class="product__name">{{ product.name }}</h1>
+    <p class="product__price">{{ product.price | moeda }}</p>
+
+    {% if product.available %}
+    <button class="btn btn--primary btn--block product__add" type="button"
+            data-add-to-cart
+            data-slug="{{ product.slug }}"
+            data-name="{{ product.name }}"
+            data-price="{{ product.price if product.has_price else '' }}"
+            data-url="{{ url(product.url) }}"
+            data-image="{{ url(product.cover) }}">
+      Adicionar ao carrinho
+    </button>
+    {% else %}
+    <button class="btn btn--disabled btn--block" type="button" disabled>Indisponível no momento</button>
+    <a class="btn btn--whatsapp btn--block" href="{{ site.contact.whatsapp_url }}" target="_blank" rel="noopener">
+      Perguntar sobre esta peça
+    </a>
+    {% endif %}
+
+    <div class="product__description">
+      {{ product.description_html | safe }}
+    </div>
+
+    <p class="product__handmade">✿ Peça feita à mão — pequenas variações são naturais e tornam cada peça única.</p>
+  </div>
+</article>
+{% endblock %}

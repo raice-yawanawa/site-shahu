@@ -1,0 +1,26 @@
+<aside class="cart" data-cart hidden aria-label="Carrinho de compras">
+  <div class="cart__header">
+    <h2>Seu carrinho</h2>
+    <button class="cart__close" type="button" data-cart-close aria-label="Fechar carrinho">&times;</button>
+  </div>
+
+  <div class="cart__items" data-cart-items>
+    <!-- itens renderizados por cart.js -->
+  </div>
+
+  <p class="cart__empty" data-cart-empty>Seu carrinho está vazio.</p>
+
+  <div class="cart__footer">
+    <div class="cart__total">
+      <span>Total</span>
+      <strong data-cart-total>R$ 0,00</strong>
+    </div>
+    <p class="cart__note">
+      A compra é finalizada pelo WhatsApp — enviamos seu pedido já montado para combinar
+      pagamento e entrega.
+    </p>
+    <button class="btn btn--whatsapp btn--block" type="button" data-cart-checkout disabled>
+      Finalizar pelo WhatsApp
+    </button>
+  </div>
+</aside>
