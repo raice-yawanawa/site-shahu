@@ -33,7 +33,15 @@ collections:
     public_folder: "/assets/images/products"
     fields:
       - { label: "Nome", name: "name", widget: "string" }
-      - { label: "Preço (R$) — deixe vazio para 'sob consulta'", name: "price", widget: "number", required: false, value_type: "float", step: 0.01, min: 0 }
+      - {
+          label: "Preço (R$) — deixe vazio para 'sob consulta'",
+          name: "price",
+          widget: "number",
+          required: false,
+          value_type: "float",
+          step: 0.01,
+          min: 0,
+        }
       - label: "Categoria"
         name: "category"
         widget: "select"
@@ -59,8 +67,18 @@ collections:
         widget: "list"
         required: false
         field: { label: "Foto", name: "image", widget: "image" }
-      - { label: "Disponível", name: "available", widget: "boolean", default: true }
-      - { label: "Destaque na home", name: "featured", widget: "boolean", default: false }
+      - {
+          label: "Disponível",
+          name: "available",
+          widget: "boolean",
+          default: true,
+        }
+      - {
+          label: "Destaque na home",
+          name: "featured",
+          widget: "boolean",
+          default: false,
+        }
       - { label: "Descrição", name: "body", widget: "markdown" }
 
   # ------------------------------------------------------ Configurações do site
@@ -71,7 +89,12 @@ collections:
         label: "Site, contato e página inicial"
         file: "content/site.yaml"
         fields:
-          - { label: "Base URL (deixe vazio para domínio na raiz)", name: "base_url", widget: "string", required: false }
+          - {
+              label: "Base URL (deixe vazio para domínio na raiz)",
+              name: "base_url",
+              widget: "string",
+              required: false,
+            }
           - label: "Marca"
             name: "brand"
             widget: "object"
@@ -83,16 +106,41 @@ collections:
             name: "contact"
             widget: "object"
             fields:
-              - { label: "WhatsApp (só dígitos, com DDI. Ex.: 5511999999999)", name: "whatsapp", widget: "string" }
-              - { label: "Instagram (sem @)", name: "instagram", widget: "string" }
+              - {
+                  label: "WhatsApp (só dígitos, com DDI. Ex.: 5511999999999)",
+                  name: "whatsapp",
+                  widget: "string",
+                }
+              - {
+                  label: "Instagram (sem @)",
+                  name: "instagram",
+                  widget: "string",
+                }
           - label: "Página inicial"
             name: "home"
             widget: "object"
             fields:
-              - { label: "Título do topo", name: "hero_title", widget: "string" }
-              - { label: "Subtítulo do topo", name: "hero_subtitle", widget: "string" }
-              - { label: "Imagem do topo", name: "hero_image", widget: "image", required: false }
-              - { label: "Título da história", name: "story_title", widget: "string" }
+              - {
+                  label: "Título do topo",
+                  name: "hero_title",
+                  widget: "string",
+                }
+              - {
+                  label: "Subtítulo do topo",
+                  name: "hero_subtitle",
+                  widget: "string",
+                }
+              - {
+                  label: "Imagem do topo",
+                  name: "hero_image",
+                  widget: "image",
+                  required: false,
+                }
+              - {
+                  label: "Título da história",
+                  name: "story_title",
+                  widget: "string",
+                }
               - label: "Parágrafos da história"
                 name: "story_paragraphs"
                 widget: "list"
@@ -103,7 +151,23 @@ collections:
                 required: false
                 fields:
                   - { label: "Imagem", name: "src", widget: "image" }
-                  - { label: "Texto alternativo", name: "alt", widget: "string" }
-              - { label: "Título dos destaques", name: "featured_title", widget: "string" }
-              - { label: "Título do bloco de contato", name: "cta_title", widget: "string" }
-              - { label: "Texto do bloco de contato", name: "cta_text", widget: "text" }
+                  - {
+                      label: "Texto alternativo",
+                      name: "alt",
+                      widget: "string",
+                    }
+              - {
+                  label: "Título dos destaques",
+                  name: "featured_title",
+                  widget: "string",
+                }
+              - {
+                  label: "Título do bloco de contato",
+                  name: "cta_title",
+                  widget: "string",
+                }
+              - {
+                  label: "Texto do bloco de contato",
+                  name: "cta_text",
+                  widget: "text",
+                }

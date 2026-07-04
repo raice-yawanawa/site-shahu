@@ -5,8 +5,9 @@
   "use strict";
 
   var STORAGE_KEY = "shahu_cart_v1";
-  var config = window.SHAHU || { whatsapp: "", brand: "SHAHU RAUTIHU KENEYA" };
+  var config = window.SHAHU || { whatsapp: "", brand: "SHAHU RAUTIHU KENEYA", base: "" };
   var brl = new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" });
+  var placeholderImg = (config.base || "") + "/static/img/placeholder.svg";
 
   // --- Estado ---
   function load() {
@@ -86,7 +87,7 @@
         row.className = "cart-item";
         row.innerHTML =
           '<img class="cart-item__img" src="' + it.image + '" alt="" ' +
-            'onerror="this.src=\'/static/img/placeholder.svg\'">' +
+            'onerror="this.src=\'' + placeholderImg + '\'">' +
           '<div>' +
             '<div class="cart-item__name">' + escapeHtml(it.name) + '</div>' +
             '<div class="cart-item__price">' + priceLabel(it.price) + '</div>' +

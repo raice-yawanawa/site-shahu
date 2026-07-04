@@ -2,7 +2,8 @@
 
 # base_url: deixe vazio para deploy na raiz de um domínio (ex.: Cloudflare Pages).
 # Para GitHub Pages em subcaminho, use algo como "/nome-do-repo".
-base_url: ""
+# Site de projeto em https://raice-yawanawa.github.io/site-shahu/
+base_url: "/site-shahu"
 
 brand:
   name: "SHAHU RAUTIHU KENEYA"

@@ -27,5 +27,5 @@ projeto adota [Versionamento Semântico](https://semver.org/lang/pt-BR/).
 - Workflow de CI/CD (GitHub Actions) para build e deploy automáticos.
 - Documentação técnica, design system e guia de conteúdo em `docs/`.
 
-[Não lançado]: https://github.com/OWNER/REPO/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/OWNER/REPO/releases/tag/v0.1.0
+[Não lançado]: https://github.com/raice-yawanawa/site-shahu/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/raice-yawanawa/site-shahu/releases/tag/v0.1.0

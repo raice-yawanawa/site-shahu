@@ -16,7 +16,8 @@
     // Configuração exposta ao carrinho (checkout via WhatsApp).
     window.SHAHU = {
       whatsapp: "{{ site.contact.whatsapp_digits }}",
-      brand: {{ site.brand_name | tojson }}
+      brand: {{ site.brand_name | tojson }},
+      base: "{{ base_url }}"
     };
   </script>
 </head>
