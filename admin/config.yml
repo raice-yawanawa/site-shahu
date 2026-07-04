@@ -4,7 +4,7 @@
 backend:
   name: github
   # >>> PREENCHER com o repositório no GitHub, no formato "usuario/repositorio".
-  repo: OWNER/REPO
+  repo: raice-yawanawa/site-shahu
   branch: main
   # Autenticação: por padrão o Sveltia usa o fluxo de OAuth do GitHub. Se hospedar em
   # Cloudflare Pages/Netlify, siga o guia do Sveltia para configurar o provedor de OAuth
