@@ -70,6 +70,7 @@ ruff check .    # lint
 - [docs/ARQUITETURA.md](docs/ARQUITETURA.md) — decisões técnicas e módulos.
 - [docs/DESIGN.md](docs/DESIGN.md) — design system (paleta, tipografia, componentes).
 - [docs/CONTEUDO.md](docs/CONTEUDO.md) — **guia da autora**: como cadastrar/editar peças.
+- [docs/DEPLOY.md](docs/DEPLOY.md) — **passo a passo de publicação** (hospedagem + CMS).
 - [CHANGELOG.md](CHANGELOG.md) — histórico de versões.
 
 ## Licença

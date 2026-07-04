@@ -7,6 +7,11 @@ projeto adota [Versionamento Semântico](https://semver.org/lang/pt-BR/).
 
 ## [Não lançado]
 
+### Adicionado
+- Guia de publicação passo a passo (`docs/DEPLOY.md`): Cloudflare Pages, GitHub Pages e
+  configuração do login do CMS.
+- Versionamento Git inicializado (`.gitattributes` normalizando quebras de linha).
+
 ## [0.1.0] - 2026-07-03
 
 ### Adicionado
