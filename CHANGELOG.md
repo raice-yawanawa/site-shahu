@@ -10,6 +10,17 @@ projeto adota [Versionamento Semântico](https://semver.org/lang/pt-BR/).
 ### Adicionado
 - Opção **"Sob encomenda"** nas peças: adiciona automaticamente o aviso na descrição do
   produto, exibe badge no card, e destaca o item no carrinho e na mensagem do WhatsApp.
+- Itens do carrinho agora são **links** para a página da peça (drawer e mensagem do WhatsApp).
+- Botão **"Perguntar sobre esta peça"** (peças indisponíveis) envia mensagem automática de
+  interesse com o link da peça.
+- Subcategoria **"Fotografias"** em Arte.
+- Ícones oficiais de **WhatsApp** e **Instagram** nos botões.
+
+### Alterado
+- Frase do rodapé passa a citar a cultura **Yawanawá**; ocorrências de "Yawanawa" corrigidas.
+
+### Removido
+- Botões de WhatsApp e Instagram do rodapé (contato permanece na home).
 - Guia de publicação passo a passo (`docs/DEPLOY.md`): Cloudflare Pages, GitHub Pages e
   configuração do login do CMS.
 - Versionamento Git inicializado (`.gitattributes` normalizando quebras de linha).

@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% from "partials/icons.html" import whatsapp, instagram %}
 {% block title %}{{ site.brand_name }} — {{ site.tagline }}{% endblock %}
 
 {% block content %}
@@ -9,8 +10,8 @@
     <h1 class="hero__title">{{ home.hero_title }}</h1>
     <p class="hero__subtitle">{{ home.hero_subtitle }}</p>
     <div class="hero__cta">
-      <a class="btn btn--whatsapp" href="{{ site.contact.whatsapp_url }}" target="_blank" rel="noopener">Falar no WhatsApp</a>
-      <a class="btn btn--outline" href="{{ site.contact.instagram_url }}" target="_blank" rel="noopener">Instagram</a>
+      <a class="btn btn--whatsapp" href="{{ site.contact.whatsapp_url }}" target="_blank" rel="noopener">{{ whatsapp() }} Falar no WhatsApp</a>
+      <a class="btn btn--outline" href="{{ site.contact.instagram_url }}" target="_blank" rel="noopener">{{ instagram() }} Instagram</a>
     </div>
   </div>
 </section>
@@ -49,8 +50,8 @@
   <h2>{{ home.cta_title }}</h2>
   <p>{{ home.cta_text }}</p>
   <div class="hero__cta">
-    <a class="btn btn--whatsapp" href="{{ site.contact.whatsapp_url }}" target="_blank" rel="noopener">WhatsApp</a>
-    <a class="btn btn--outline" href="{{ site.contact.instagram_url }}" target="_blank" rel="noopener">Instagram</a>
+    <a class="btn btn--whatsapp" href="{{ site.contact.whatsapp_url }}" target="_blank" rel="noopener">{{ whatsapp() }} WhatsApp</a>
+    <a class="btn btn--outline" href="{{ site.contact.instagram_url }}" target="_blank" rel="noopener">{{ instagram() }} Instagram</a>
   </div>
 </section>
 {% endblock %}

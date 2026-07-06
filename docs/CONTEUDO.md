@@ -45,7 +45,7 @@ Regras importantes:
   [`content/categories.yaml`](../content/categories.yaml). Slugs válidos:
   - **joias** → `colares`, `brincos`, `pulseiras`, `aneis`, `amarradores`
   - **vestuario** → `vestidos`, `cintos`
-  - **arte** → `gravuras`
+  - **arte** → `gravuras`, `fotografias`
 - **Imagens:** suba os arquivos em `assets/images/products/` e referencie o caminho
   começando com `/assets/...`. A primeira imagem é a capa.
 - **`price`** é um número (use ponto decimal, ex.: `189.90`). Deixe em branco para

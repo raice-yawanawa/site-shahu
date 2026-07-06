@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% from "partials/icons.html" import whatsapp %}
 {% set sub = category.subcategory(product.subcategory) if category else None %}
 {% set gallery = product.images if product.images else [product.cover] %}
 {% block title %}{{ product.name }} — {{ site.brand_name }}{% endblock %}
@@ -46,9 +47,12 @@
     </button>
     {% else %}
     <button class="btn btn--disabled btn--block" type="button" disabled>Indisponível no momento</button>
-    <a class="btn btn--whatsapp btn--block" href="{{ site.contact.whatsapp_url }}" target="_blank" rel="noopener">
-      Perguntar sobre esta peça
-    </a>
+    <button class="btn btn--whatsapp btn--block" type="button"
+            data-ask-whatsapp
+            data-name="{{ product.name }}"
+            data-url="{{ url(product.url) }}">
+      {{ whatsapp() }} Perguntar sobre esta peça
+    </button>
     {% endif %}
 
     <div class="product__description">

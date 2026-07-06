@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% from "partials/icons.html" import whatsapp %}
 {% set titulo = subcategory.name if subcategory else category.name %}
 {% block title %}{{ titulo }} — {{ site.brand_name }}{% endblock %}
 
@@ -28,7 +29,7 @@
 <div class="empty-state">
   <p>Ainda não há peças nesta categoria.</p>
   <a class="btn btn--whatsapp" href="{{ site.contact.whatsapp_url }}" target="_blank" rel="noopener">
-    Fazer uma encomenda no WhatsApp
+    {{ whatsapp() }} Fazer uma encomenda no WhatsApp
   </a>
 </div>
 {% endif %}

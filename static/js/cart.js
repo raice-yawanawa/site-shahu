@@ -9,6 +9,13 @@
   var brl = new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" });
   var placeholderImg = (config.base || "") + "/static/img/placeholder.svg";
 
+  // Converte um caminho do site em URL absoluta (para colar na mensagem do WhatsApp).
+  function absoluteUrl(u) {
+    if (!u) return "";
+    if (/^https?:\/\//.test(u)) return u;
+    return window.location.origin + u;
+  }
+
   // --- Estado ---
   function load() {
     try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || []; }
@@ -87,10 +94,12 @@
         var row = document.createElement("div");
         row.className = "cart-item";
         row.innerHTML =
-          '<img class="cart-item__img" src="' + it.image + '" alt="" ' +
-            'onerror="this.src=\'' + placeholderImg + '\'">' +
+          '<a class="cart-item__media" href="' + it.url + '">' +
+            '<img class="cart-item__img" src="' + it.image + '" alt="' + escapeHtml(it.name) + '" ' +
+              'onerror="this.src=\'' + placeholderImg + '\'">' +
+          '</a>' +
           '<div>' +
-            '<div class="cart-item__name">' + escapeHtml(it.name) + '</div>' +
+            '<div class="cart-item__name"><a href="' + it.url + '">' + escapeHtml(it.name) + '</a></div>' +
             '<div class="cart-item__price">' + priceLabel(it.price) + '</div>' +
             (it.madeToOrder ? '<div class="cart-item__tag">Sob encomenda*</div>' : '') +
             '<div class="cart-item__qty">' +
@@ -141,7 +150,8 @@
     var linhas = items.map(function (it) {
       var subtotal = it.price != null ? " — " + brl.format(it.price * it.qty) : " — Sob consulta";
       var tag = it.madeToOrder ? " (sob encomenda*)" : "";
-      return "• " + it.qty + "x " + it.name + tag + subtotal;
+      var link = absoluteUrl(it.url);
+      return "• " + it.qty + "x " + it.name + tag + subtotal + (link ? "\n  " + link : "");
     });
     var temEncomenda = items.some(function (it) { return it.madeToOrder; });
     var msg =
@@ -170,6 +180,23 @@
       openCart();
     });
   });
+  // Botão "Perguntar sobre esta peça" (produtos indisponíveis): mensagem automática.
+  document.querySelectorAll("[data-ask-whatsapp]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var nome = btn.dataset.name || "";
+      var link = absoluteUrl(btn.dataset.url || "");
+      var msg =
+        "Olá, tenho interesse na peça " + nome +
+        ", por favor, poderia me atualizar sobre próximas produções?" +
+        (link ? "\n\n" + link : "");
+      window.open(
+        "https://wa.me/" + config.whatsapp + "?text=" + encodeURIComponent(msg),
+        "_blank",
+        "noopener"
+      );
+    });
+  });
+
   if (el.open) el.open.addEventListener("click", openCart);
   if (el.close) el.close.addEventListener("click", closeCart);
   if (el.checkout) el.checkout.addEventListener("click", checkout);

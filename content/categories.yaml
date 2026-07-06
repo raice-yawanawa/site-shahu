@@ -20,3 +20,4 @@
   name: Arte
   subcategories:
     - { slug: gravuras, name: Gravuras }
+    - { slug: fotografias, name: Fotografias }

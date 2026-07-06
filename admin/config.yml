@@ -59,6 +59,7 @@ collections:
           - { label: "Vestidos (Vestuário)", value: "vestidos" }
           - { label: "Cintos (Vestuário)", value: "cintos" }
           - { label: "Gravuras (Arte)", value: "gravuras" }
+          - { label: "Fotografias (Arte)", value: "fotografias" }
       - label: "Fotos"
         name: "images"
         widget: "list"
