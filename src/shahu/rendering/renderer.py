@@ -55,6 +55,9 @@ class Renderer:
             "current_year": _dt.date.today().year,
             "base_url": site.base_url,
             "url": url,
+            # Token de cache: muda a cada build, forçando o navegador a baixar
+            # os CSS/JS novos após cada publicação (evita conteúdo em cache).
+            "asset_version": _dt.datetime.now().strftime("%Y%m%d%H%M%S"),
         }
 
     def render(self, template_name: str, **context: Any) -> str:

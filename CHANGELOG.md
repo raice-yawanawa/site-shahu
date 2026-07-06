@@ -17,6 +17,7 @@ projeto adota [Versionamento Semântico](https://semver.org/lang/pt-BR/).
 - Ícones oficiais de **WhatsApp** e **Instagram** nos botões.
 - Botão discreto **"Limpar carrinho"** (ícone de lixeira), com confirmação.
 - Destaque **"Sob consulta"** para itens sem preço no carrinho e nota na mensagem do WhatsApp.
+- **Versionamento de assets** (`?v=<build>`) em CSS/JS para evitar cache desatualizado após deploys.
 
 ### Alterado
 - Contatos (WhatsApp/Instagram) movidos para o **cabeçalho**, como ícones discretos ao lado
