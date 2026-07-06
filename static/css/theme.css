@@ -16,6 +16,8 @@
   --cor-whatsapp: #25d366;
   --cor-whatsapp-escuro: #1da851;
   --cor-whatsapp-pastel: #a9e5c0; /* verde oficial do WhatsApp em tom pastel */
+  /* Degradê oficial do Instagram (amarelo -> laranja -> rosa -> roxo -> azul) em tons pastéis */
+  --gradiente-instagram-pastel: linear-gradient(45deg, #fce3a8 0%, #f5b78e 25%, #e79cc0 55%, #c9a9e4 80%, #a6b4ec 100%);
 
   --branco: #fffaf3;
   --sombra: 0 6px 20px rgba(59, 36, 25, 0.12);
@@ -104,10 +106,7 @@ h1, h2, h3 { font-family: var(--fonte-titulo); color: var(--cor-marrom); line-he
 .header__social:hover { text-decoration: none; filter: brightness(0.93); }
 .header__social .icon { width: 19px; height: 19px; }
 .header__social--whatsapp { background: var(--cor-whatsapp-pastel); }
-/* Degradê oficial do Instagram (amarelo -> laranja -> rosa -> roxo -> azul) em tons pastéis */
-.header__social--instagram {
-  background: linear-gradient(45deg, #fce3a8 0%, #f5b78e 25%, #e79cc0 55%, #c9a9e4 80%, #a6b4ec 100%);
-}
+.header__social--instagram { background: var(--gradiente-instagram-pastel); }
 
 .header__cart {
   position: relative;
@@ -215,6 +214,10 @@ h1, h2, h3 { font-family: var(--fonte-titulo); color: var(--cor-marrom); line-he
 .btn--outline:hover { background: var(--cor-marrom); color: var(--branco); }
 .btn--whatsapp { background: var(--cor-whatsapp); color: #fff; }
 .btn--whatsapp:hover { background: var(--cor-whatsapp-escuro); }
+/* Variantes pastel (mesmo padrão dos ícones do cabeçalho) */
+.btn--whatsapp-pastel { background: var(--cor-whatsapp-pastel); color: var(--cor-marrom); }
+.btn--instagram-pastel { background: var(--gradiente-instagram-pastel); color: var(--cor-marrom); }
+.btn--whatsapp-pastel:hover, .btn--instagram-pastel:hover { filter: brightness(0.94); }
 .btn--disabled { background: rgba(59, 36, 25, 0.12); color: var(--cor-marrom-suave); cursor: not-allowed; }
 
 /* ---------------------------------------------------------------- Títulos */
