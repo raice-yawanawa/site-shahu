@@ -347,6 +347,9 @@ h1, h2, h3 { font-family: var(--fonte-titulo); color: var(--cor-marrom); line-he
 .cart[hidden] { display: flex; }
 .cart__header { display: flex; align-items: center; justify-content: space-between; padding: 20px 22px; border-bottom: 1px solid rgba(59,36,25,0.12); }
 .cart__header h2 { margin: 0; font-size: 1.6rem; }
+.cart__header-actions { display: flex; align-items: center; gap: 6px; }
+.cart__clear { display: inline-flex; align-items: center; gap: 5px; padding: 5px 8px; background: none; border: none; border-radius: var(--raio-sm); cursor: pointer; color: var(--cor-marrom-suave); font-size: 0.78rem; font-family: var(--fonte-corpo); }
+.cart__clear:hover { color: var(--cor-terracota-escuro); background: var(--cor-bege-claro); }
 .cart__close { background: none; border: none; font-size: 2rem; line-height: 1; cursor: pointer; color: var(--cor-marrom); }
 .cart__items { flex: 1; overflow-y: auto; padding: 16px 22px; display: flex; flex-direction: column; gap: 14px; }
 .cart__empty { text-align: center; color: var(--cor-marrom-suave); padding: 40px 20px; }

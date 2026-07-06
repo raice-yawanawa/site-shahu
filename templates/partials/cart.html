@@ -1,7 +1,15 @@
 <aside class="cart" data-cart hidden aria-label="Carrinho de compras">
   <div class="cart__header">
     <h2>Seu carrinho</h2>
-    <button class="cart__close" type="button" data-cart-close aria-label="Fechar carrinho">&times;</button>
+    <div class="cart__header-actions">
+      <button class="cart__clear" type="button" data-cart-clear aria-label="Limpar carrinho" title="Limpar carrinho" hidden>
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+          <path fill="currentColor" d="M9 3v1H4v2h16V4h-5V3H9zM6 8v11a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V8H6zm3 2h2v9H9v-9zm4 0h2v9h-2v-9z"/>
+        </svg>
+        <span>Limpar</span>
+      </button>
+      <button class="cart__close" type="button" data-cart-close aria-label="Fechar carrinho">&times;</button>
+    </div>
   </div>
 
   <div class="cart__items" data-cart-items>

@@ -15,6 +15,7 @@ projeto adota [Versionamento Semântico](https://semver.org/lang/pt-BR/).
   interesse com o link da peça.
 - Subcategoria **"Fotografias"** em Arte.
 - Ícones oficiais de **WhatsApp** e **Instagram** nos botões.
+- Botão discreto **"Limpar carrinho"** (ícone de lixeira), com confirmação.
 
 ### Alterado
 - Frase do rodapé passa a citar a cultura **Yawanawá**; ocorrências de "Yawanawa" corrigidas.

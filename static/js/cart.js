@@ -62,6 +62,11 @@
     if (idx >= 0) { items.splice(idx, 1); persistAndRender(); }
   }
 
+  function clear() {
+    items = [];
+    persistAndRender();
+  }
+
   function count() { return items.reduce(function (n, it) { return n + it.qty; }, 0); }
 
   function total() {
@@ -79,6 +84,7 @@
     total: document.querySelector("[data-cart-total]"),
     count: document.querySelector("[data-cart-count]"),
     checkout: document.querySelector("[data-cart-checkout]"),
+    clear: document.querySelector("[data-cart-clear]"),
     open: document.querySelector("[data-cart-open]"),
     close: document.querySelector("[data-cart-close]")
   };
@@ -119,6 +125,7 @@
     var isEmpty = items.length === 0;
     if (el.empty) el.empty.style.display = isEmpty ? "block" : "none";
     if (el.checkout) el.checkout.disabled = isEmpty;
+    if (el.clear) el.clear.hidden = isEmpty;
     if (el.total) {
       el.total.textContent = brl.format(total()) + (hasUnpriced() ? " +" : "");
     }
@@ -200,6 +207,9 @@
   if (el.open) el.open.addEventListener("click", openCart);
   if (el.close) el.close.addEventListener("click", closeCart);
   if (el.checkout) el.checkout.addEventListener("click", checkout);
+  if (el.clear) el.clear.addEventListener("click", function () {
+    if (items.length && window.confirm("Remover todos os itens do carrinho?")) clear();
+  });
   if (window.ShahuOverlay) window.ShahuOverlay.onClose(closeCart);
 
   render();
