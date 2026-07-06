@@ -18,6 +18,8 @@ projeto adota [Versionamento Semântico](https://semver.org/lang/pt-BR/).
 - Botão discreto **"Limpar carrinho"** (ícone de lixeira), com confirmação.
 
 ### Alterado
+- Contatos (WhatsApp/Instagram) movidos para o **cabeçalho**, como ícones discretos ao lado
+  do carrinho (verde água pastel e lilás pastel); removidos do topo da home.
 - Frase do rodapé passa a citar a cultura **Yawanawá**; ocorrências de "Yawanawa" corrigidas.
 
 ### Removido

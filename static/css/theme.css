@@ -15,6 +15,8 @@
   --cor-rosa: #e8b5b0;
   --cor-whatsapp: #25d366;
   --cor-whatsapp-escuro: #1da851;
+  --cor-whatsapp-pastel: #a7ddce; /* verde água pastel (ícone no cabeçalho) */
+  --cor-instagram-pastel: #cbb8ec; /* lilás pastel (ícone no cabeçalho) */
 
   --branco: #fffaf3;
   --sombra: 0 6px 20px rgba(59, 36, 25, 0.12);
@@ -88,6 +90,22 @@ h1, h2, h3 { font-family: var(--fonte-titulo); color: var(--cor-marrom); line-he
   cursor: pointer;
 }
 .header__menu span { height: 2px; background: var(--cor-marrom); border-radius: 2px; }
+
+.header__actions { display: flex; align-items: center; gap: 10px; }
+
+.header__social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; height: 40px;
+  color: var(--cor-marrom);
+  border-radius: 50%;
+  transition: filter 0.15s ease;
+}
+.header__social:hover { text-decoration: none; filter: brightness(0.93); }
+.header__social .icon { width: 19px; height: 19px; }
+.header__social--whatsapp { background: var(--cor-whatsapp-pastel); }
+.header__social--instagram { background: var(--cor-instagram-pastel); }
 
 .header__cart {
   position: relative;
