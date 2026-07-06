@@ -214,10 +214,11 @@ h1, h2, h3 { font-family: var(--fonte-titulo); color: var(--cor-marrom); line-he
 .btn--outline:hover { background: var(--cor-marrom); color: var(--branco); }
 .btn--whatsapp { background: var(--cor-whatsapp); color: #fff; }
 .btn--whatsapp:hover { background: var(--cor-whatsapp-escuro); }
-/* Variantes pastel (mesmo padrão dos ícones do cabeçalho) */
-.btn--whatsapp-pastel { background: var(--cor-whatsapp-pastel); color: var(--cor-marrom); }
-.btn--instagram-pastel { background: var(--gradiente-instagram-pastel); color: var(--cor-marrom); }
+/* Variantes pastel (mesmo padrão dos ícones do cabeçalho): sem borda nem contorno */
+.btn--whatsapp-pastel { background: var(--cor-whatsapp-pastel); color: var(--cor-marrom); border: none; }
+.btn--instagram-pastel { background: var(--gradiente-instagram-pastel); color: var(--cor-marrom); border: none; }
 .btn--whatsapp-pastel:hover, .btn--instagram-pastel:hover { filter: brightness(0.94); }
+.btn--whatsapp-pastel:focus-visible, .btn--instagram-pastel:focus-visible { outline: none; }
 .btn--disabled { background: rgba(59, 36, 25, 0.12); color: var(--cor-marrom-suave); cursor: not-allowed; }
 
 /* ---------------------------------------------------------------- Títulos */
