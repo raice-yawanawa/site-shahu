@@ -3,13 +3,10 @@
 
 backend:
   name: github
-  # >>> PREENCHER com o repositório no GitHub, no formato "usuario/repositorio".
   repo: raice-yawanawa/site-shahu
   branch: main
-  # Autenticação: por padrão o Sveltia usa o fluxo de OAuth do GitHub. Se hospedar em
-  # Cloudflare Pages/Netlify, siga o guia do Sveltia para configurar o provedor de OAuth
-  # (ex.: um pequeno Worker/Function gratuito) e descomente/ajuste 'base_url' se preciso.
-  # base_url: https://SEU-PROVEDOR-OAUTH
+  # Provedor de OAuth (Cloudflare Worker sveltia-cms-auth) que faz o login via GitHub.
+  base_url: https://sveltia-cms-auth.raice-yawanawa.workers.dev
 
 # Idioma do painel
 locale: pt
