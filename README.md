@@ -5,6 +5,16 @@
 <h1 align="center">SHAHU RAUTIHU KENEYA</h1>
 <p align="center"><em>Ancestralidade em cada detalhe</em></p>
 
+<p align="center">
+  <a href="https://raice-yawanawa.github.io/site-shahu/"><strong>🌐 Acessar o site</strong></a>
+  &nbsp;·&nbsp;
+  <a href="https://raice-yawanawa.github.io/site-shahu/admin/"><strong>🔐 Painel de conteúdo (admin)</strong></a>
+</p>
+
+> **Links oficiais**
+> - **Site:** https://raice-yawanawa.github.io/site-shahu/
+> - **Painel admin (CMS):** https://raice-yawanawa.github.io/site-shahu/admin/
+
 Site de vendas de **artesanato indígena** da marca SHAHU RAUTIHU KENEYA. Projeto
 **voluntário de apoio à arte indígena** — construído inteiramente sobre serviços
 **gratuitos** e fácil de manter.
