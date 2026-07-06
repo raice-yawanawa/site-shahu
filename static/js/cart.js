@@ -106,7 +106,11 @@
           '</a>' +
           '<div>' +
             '<div class="cart-item__name"><a href="' + it.url + '">' + escapeHtml(it.name) + '</a></div>' +
-            '<div class="cart-item__price">' + priceLabel(it.price) + '</div>' +
+            '<div class="cart-item__price">' +
+              (it.price == null
+                ? '<span class="cart-item__consulta">Sob consulta</span>'
+                : priceLabel(it.price)) +
+            '</div>' +
             (it.madeToOrder ? '<div class="cart-item__tag">Sob encomenda*</div>' : '') +
             '<div class="cart-item__qty">' +
               '<button type="button" data-dec aria-label="Diminuir">−</button>' +
@@ -166,6 +170,9 @@
       linhas.join("\n") +
       "\n\nTotal: " + brl.format(total()) +
       (hasUnpriced() ? " (+ itens sob consulta)" : "") +
+      (hasUnpriced()
+        ? "\n\nItens marcados como \"Sob consulta\": o valor será combinado diretamente no atendimento."
+        : "") +
       (temEncomenda
         ? "\n\n*Itens sob encomenda: verificar políticas e condições para adquirir este produto."
         : "");

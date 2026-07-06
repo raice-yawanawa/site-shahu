@@ -16,10 +16,12 @@ projeto adota [Versionamento Semântico](https://semver.org/lang/pt-BR/).
 - Subcategoria **"Fotografias"** em Arte.
 - Ícones oficiais de **WhatsApp** e **Instagram** nos botões.
 - Botão discreto **"Limpar carrinho"** (ícone de lixeira), com confirmação.
+- Destaque **"Sob consulta"** para itens sem preço no carrinho e nota na mensagem do WhatsApp.
 
 ### Alterado
 - Contatos (WhatsApp/Instagram) movidos para o **cabeçalho**, como ícones discretos ao lado
-  do carrinho (verde água pastel e lilás pastel); removidos do topo da home.
+  do carrinho, nas cores oficiais em tom pastel (verde do WhatsApp e degradê do Instagram);
+  removidos do topo da home.
 - Frase do rodapé passa a citar a cultura **Yawanawá**; ocorrências de "Yawanawa" corrigidas.
 
 ### Removido

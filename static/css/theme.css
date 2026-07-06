@@ -15,8 +15,7 @@
   --cor-rosa: #e8b5b0;
   --cor-whatsapp: #25d366;
   --cor-whatsapp-escuro: #1da851;
-  --cor-whatsapp-pastel: #a7ddce; /* verde água pastel (ícone no cabeçalho) */
-  --cor-instagram-pastel: #cbb8ec; /* lilás pastel (ícone no cabeçalho) */
+  --cor-whatsapp-pastel: #a9e5c0; /* verde oficial do WhatsApp em tom pastel */
 
   --branco: #fffaf3;
   --sombra: 0 6px 20px rgba(59, 36, 25, 0.12);
@@ -105,7 +104,10 @@ h1, h2, h3 { font-family: var(--fonte-titulo); color: var(--cor-marrom); line-he
 .header__social:hover { text-decoration: none; filter: brightness(0.93); }
 .header__social .icon { width: 19px; height: 19px; }
 .header__social--whatsapp { background: var(--cor-whatsapp-pastel); }
-.header__social--instagram { background: var(--cor-instagram-pastel); }
+/* Degradê oficial do Instagram (amarelo -> laranja -> rosa -> roxo -> azul) em tons pastéis */
+.header__social--instagram {
+  background: linear-gradient(45deg, #fce3a8 0%, #f5b78e 25%, #e79cc0 55%, #c9a9e4 80%, #a6b4ec 100%);
+}
 
 .header__cart {
   position: relative;
@@ -380,6 +382,7 @@ h1, h2, h3 { font-family: var(--fonte-titulo); color: var(--cor-marrom); line-he
 .cart-item__name a:hover { color: var(--cor-terracota-escuro); text-decoration: underline; }
 .cart-item__price { font-size: 0.85rem; color: var(--cor-marrom-suave); }
 .cart-item__tag { display: inline-block; margin-top: 4px; padding: 2px 8px; font-size: 0.7rem; font-weight: 600; color: var(--cor-marrom); background: var(--cor-azul); border-radius: 999px; }
+.cart-item__consulta { display: inline-block; padding: 2px 8px; font-size: 0.72rem; font-weight: 600; color: var(--cor-marrom); background: var(--cor-amarelo); border-radius: 999px; }
 .cart-item__qty { display: inline-flex; align-items: center; gap: 8px; margin-top: 6px; }
 .cart-item__qty button { width: 26px; height: 26px; border-radius: 50%; border: 1px solid rgba(59,36,25,0.25); background: var(--branco); cursor: pointer; font-size: 1rem; color: var(--cor-marrom); }
 .cart-item__remove { background: none; border: none; color: var(--cor-terracota-escuro); cursor: pointer; font-size: 0.8rem; }
