@@ -40,4 +40,5 @@ class SiteContent:
     logo: str
     contact: Contact
     home: dict = field(default_factory=dict)
+    credits: dict = field(default_factory=dict)
     base_url: str = ""

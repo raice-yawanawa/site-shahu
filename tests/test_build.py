@@ -31,6 +31,7 @@ def _make_project(tmp_path):
             base_url: ""
             brand: { name: "SHAHU RAUTIHU KENEYA", tagline: "Ancestralidade", logo: "/l.png" }
             contact: { whatsapp: "5511999999999", instagram: "shahu" }
+            credits: { developer: "Dev Teste", developer_url: "https://exemplo.com/dev" }
             home:
               hero_title: "Arte à mão"
               hero_subtitle: "Sub"
@@ -50,6 +51,8 @@ def _make_project(tmp_path):
         "images: []\navailable: true\nfeatured: true\nmade_to_order: true\n---\nUm belo colar.\n",
         encoding="utf-8",
     )
+
+    (root / "humans.txt").write_text("Desenvolvedora: Dev Teste\n", encoding="utf-8")
 
     shutil.copytree(PROJECT_ROOT / "templates", root / "templates")
     shutil.copytree(PROJECT_ROOT / "static", root / "static")
@@ -76,6 +79,12 @@ def test_build_gera_paginas(tmp_path):
     assert "SHAHU RAUTIHU KENEYA" in home
     assert "wa.me/5511999999999" in home
 
+    # crédito de autoria: rodapé + meta author
+    assert "Dev Teste" in home
+    assert 'name="author"' in home
+
     # estáticos copiados
     assert (out / "static" / "css" / "theme.css").exists()
     assert (out / "static" / "js" / "cart.js").exists()
+    # arquivo humans.txt copiado para a raiz
+    assert (out / "humans.txt").exists()

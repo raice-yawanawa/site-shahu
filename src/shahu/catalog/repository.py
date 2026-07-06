@@ -29,6 +29,7 @@ def load_site_content(path: Path) -> SiteContent:
             instagram=str(contact.get("instagram", "")),
         ),
         home=data.get("home", {}) or {},
+        credits=data.get("credits", {}) or {},
         base_url=str(data.get("base_url", "")).rstrip("/"),
     )
 

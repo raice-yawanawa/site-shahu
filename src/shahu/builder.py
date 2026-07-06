@@ -89,6 +89,12 @@ def build(paths: Paths = PATHS) -> Path:
     _copy_tree(paths.assets, output / "assets")
     _copy_tree(paths.admin, output / "admin")
 
+    # --- Arquivos avulsos na raiz do site (ex.: humans.txt) ---
+    for name in ("humans.txt",):
+        src = paths.root / name
+        if src.exists():
+            shutil.copy2(src, output / name)
+
     return output
 
 

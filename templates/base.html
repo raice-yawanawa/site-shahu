@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block title %}{{ site.brand_name }}{% endblock %}</title>
   <meta name="description" content="{% block description %}{{ site.tagline }} — artesanato indígena feito à mão.{% endblock %}">
+  {% if site.credits.get('developer') %}
+  <meta name="author" content="{{ site.credits.get('developer') }}">
+  {% endif %}
+  <link rel="author" href="{{ url('/humans.txt') }}">
 
   <link rel="icon" href="{{ url(site.logo) }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">

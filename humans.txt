@@ -1,0 +1,10 @@
+/* EQUIPE */
+Desenvolvedora: Camila Cerreti
+LinkedIn: https://www.linkedin.com/in/camilacc/
+Função: Desenvolvimento voluntário do site
+
+/* SITE */
+Marca: SHAHU RAUTIHU KENEYA
+Sobre: Artesanato indígena Yawanawá — projeto voluntário de apoio à arte indígena
+Tecnologia: Gerador de site estático em Python (Jinja2)
+Hospedagem: GitHub Pages

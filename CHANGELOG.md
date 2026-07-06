@@ -7,6 +7,13 @@ projeto adota [Versionamento Semântico](https://semver.org/lang/pt-BR/).
 
 ## [Não lançado]
 
+## [1.1.0] - 2026-07-06
+
+### Adicionado
+- **Registro de autoria** do desenvolvimento (Camila Cerreti): linha discreta no rodapé
+  com link para o LinkedIn, `<meta name="author">` no `<head>` e arquivo `/humans.txt`.
+- Suporte a arquivos avulsos na raiz do site no build (ex.: `humans.txt`).
+
 ## [1.0.0] - 2026-07-06
 
 🎉 **Lançamento público do site** em https://raice-yawanawa.github.io/site-shahu/
@@ -55,6 +62,7 @@ projeto adota [Versionamento Semântico](https://semver.org/lang/pt-BR/).
 - Workflow de CI/CD (GitHub Actions) para build e deploy automáticos.
 - Documentação técnica, design system e guia de conteúdo em `docs/`.
 
-[Não lançado]: https://github.com/raice-yawanawa/site-shahu/compare/v1.0.0...HEAD
+[Não lançado]: https://github.com/raice-yawanawa/site-shahu/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/raice-yawanawa/site-shahu/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/raice-yawanawa/site-shahu/compare/v0.1.0...v1.0.0
 [0.1.0]: https://github.com/raice-yawanawa/site-shahu/releases/tag/v0.1.0

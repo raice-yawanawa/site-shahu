@@ -345,7 +345,10 @@ h1, h2, h3 { font-family: var(--fonte-titulo); color: var(--cor-marrom); line-he
 .footer__brand strong { display: block; font-family: var(--fonte-titulo); font-size: 1.2rem; letter-spacing: 0.05em; }
 .footer__brand span { font-size: 0.85rem; opacity: 0.85; }
 .footer__contact { display: flex; gap: 12px; }
-.footer__note { text-align: center; padding: 0 20px 28px; margin: 0; font-size: 0.82rem; opacity: 0.75; }
+.footer__note { text-align: center; padding: 0 20px 6px; margin: 0; font-size: 0.82rem; opacity: 0.75; }
+.footer__credit { text-align: center; padding: 0 20px 26px; margin: 0; font-size: 0.75rem; opacity: 0.6; }
+.footer__credit a { color: var(--cor-bege); text-decoration: underline; }
+.footer__credit a:hover { opacity: 0.85; }
 
 /* -------------------------------------------------------- Carrinho (drawer) */
 .overlay {

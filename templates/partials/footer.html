@@ -11,4 +11,14 @@
   <p class="footer__note">
     &copy; {{ current_year }} {{ site.brand_name }} · Projeto voluntário de apoio à arte indígena Yawanawá
   </p>
+  {% if site.credits.get('developer') %}
+  <p class="footer__credit">
+    Site desenvolvido voluntariamente por
+    {% if site.credits.get('developer_url') %}
+    <a href="{{ site.credits.get('developer_url') }}" target="_blank" rel="noopener">{{ site.credits.get('developer') }}</a>
+    {% else %}
+    {{ site.credits.get('developer') }}
+    {% endif %}
+  </p>
+  {% endif %}
 </footer>
