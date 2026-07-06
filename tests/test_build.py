@@ -47,7 +47,7 @@ def _make_project(tmp_path):
     )
     (root / "content" / "products" / "colar-a.md").write_text(
         "---\nname: \"Colar A\"\nprice: 100.0\ncategory: joias\nsubcategory: colares\n"
-        "images: []\navailable: true\nfeatured: true\n---\nUm belo colar.\n",
+        "images: []\navailable: true\nfeatured: true\nmade_to_order: true\n---\nUm belo colar.\n",
         encoding="utf-8",
     )
 
@@ -68,6 +68,9 @@ def test_build_gera_paginas(tmp_path):
     assert "Colar A" in produto
     assert "R$ 100,00" in produto
     assert "data-add-to-cart" in produto
+    # peça sob encomenda: atributo no botão e aviso automático na descrição
+    assert 'data-made-to-order="true"' in produto
+    assert "apenas sob encomenda" in produto
 
     home = (out / "index.html").read_text(encoding="utf-8")
     assert "SHAHU RAUTIHU KENEYA" in home

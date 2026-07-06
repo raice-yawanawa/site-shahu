@@ -8,6 +8,8 @@ projeto adota [Versionamento Semântico](https://semver.org/lang/pt-BR/).
 ## [Não lançado]
 
 ### Adicionado
+- Opção **"Sob encomenda"** nas peças: adiciona automaticamente o aviso na descrição do
+  produto, exibe badge no card, e destaca o item no carrinho e na mensagem do WhatsApp.
 - Guia de publicação passo a passo (`docs/DEPLOY.md`): Cloudflare Pages, GitHub Pages e
   configuração do login do CMS.
 - Versionamento Git inicializado (`.gitattributes` normalizando quebras de linha).

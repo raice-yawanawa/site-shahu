@@ -35,7 +35,8 @@ def content_dir(tmp_path):
         (products / f"{slug}.md").write_text(f"---\n{linhas}\n---\n{body}\n", encoding="utf-8")
 
     _write("colar-a", {"name": "Colar A", "price": 100.0, "category": "joias",
-                        "subcategory": "colares", "featured": True, "available": True})
+                        "subcategory": "colares", "featured": True, "available": True,
+                        "made_to_order": True})
     _write("colar-b", {"name": "Colar B", "price": 50.0, "category": "joias",
                         "subcategory": "colares", "featured": False, "available": False})
     _write("brinco-c", {"name": "Brinco C", "price": 30.0, "category": "joias",
@@ -62,7 +63,10 @@ def test_load_products_sorted_and_parsed(content_dir):
     assert gravura.has_price is False
     colar_b = next(p for p in products if p.slug == "colar-b")
     assert colar_b.available is False
-    assert "<p>" in next(p for p in products if p.slug == "colar-a").description_html
+    assert colar_b.made_to_order is False  # default quando ausente
+    colar_a = next(p for p in products if p.slug == "colar-a")
+    assert colar_a.made_to_order is True
+    assert "<p>" in colar_a.description_html
 
 
 def test_catalog_queries(content_dir):

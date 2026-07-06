@@ -4,6 +4,8 @@
          loading="lazy" onerror="this.src='{{ url('/static/img/placeholder.svg') }}'">
     {% if not product.available %}
     <span class="badge badge--indisponivel">Indisponível</span>
+    {% elif product.made_to_order %}
+    <span class="badge badge--encomenda">Sob encomenda</span>
     {% elif product.featured %}
     <span class="badge badge--destaque">Destaque</span>
     {% endif %}
@@ -18,7 +20,8 @@
             data-name="{{ product.name }}"
             data-price="{{ product.price if product.has_price else '' }}"
             data-url="{{ url(product.url) }}"
-            data-image="{{ url(product.cover) }}">
+            data-image="{{ url(product.cover) }}"
+            data-made-to-order="{{ 'true' if product.made_to_order else 'false' }}">
       Adicionar
     </button>
     {% else %}

@@ -40,7 +40,8 @@
             data-name="{{ product.name }}"
             data-price="{{ product.price if product.has_price else '' }}"
             data-url="{{ url(product.url) }}"
-            data-image="{{ url(product.cover) }}">
+            data-image="{{ url(product.cover) }}"
+            data-made-to-order="{{ 'true' if product.made_to_order else 'false' }}">
       Adicionar ao carrinho
     </button>
     {% else %}
@@ -53,6 +54,10 @@
     <div class="product__description">
       {{ product.description_html | safe }}
     </div>
+
+    {% if product.made_to_order %}
+    <p class="product__made-to-order">*Peça apenas sob encomenda, verificar políticas e condições para adquirir este produto</p>
+    {% endif %}
 
     <p class="product__handmade">✿ Peça feita à mão — pequenas variações são naturais e tornam cada peça única.</p>
   </div>

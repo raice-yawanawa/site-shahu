@@ -79,6 +79,7 @@ def load_products(products_dir: Path) -> list[Product]:
                 price=_parse_price(meta.get("price")),
                 available=bool(meta.get("available", True)),
                 featured=bool(meta.get("featured", False)),
+                made_to_order=bool(meta.get("made_to_order", False)),
             )
         )
     return sorted(products, key=lambda p: p.name.casefold())

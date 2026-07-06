@@ -35,6 +35,7 @@
         price: isNaN(priceNum) ? null : priceNum,
         url: data.url || "",
         image: data.image || "",
+        madeToOrder: data.madeToOrder === true || data.madeToOrder === "true",
         qty: 1
       });
     }
@@ -91,6 +92,7 @@
           '<div>' +
             '<div class="cart-item__name">' + escapeHtml(it.name) + '</div>' +
             '<div class="cart-item__price">' + priceLabel(it.price) + '</div>' +
+            (it.madeToOrder ? '<div class="cart-item__tag">Sob encomenda*</div>' : '') +
             '<div class="cart-item__qty">' +
               '<button type="button" data-dec aria-label="Diminuir">−</button>' +
               '<span>' + it.qty + '</span>' +
@@ -138,13 +140,18 @@
     if (items.length === 0) return;
     var linhas = items.map(function (it) {
       var subtotal = it.price != null ? " — " + brl.format(it.price * it.qty) : " — Sob consulta";
-      return "• " + it.qty + "x " + it.name + subtotal;
+      var tag = it.madeToOrder ? " (sob encomenda*)" : "";
+      return "• " + it.qty + "x " + it.name + tag + subtotal;
     });
+    var temEncomenda = items.some(function (it) { return it.madeToOrder; });
     var msg =
       "Olá! Gostaria de fazer um pedido na " + config.brand + ":\n\n" +
       linhas.join("\n") +
       "\n\nTotal: " + brl.format(total()) +
-      (hasUnpriced() ? " (+ itens sob consulta)" : "");
+      (hasUnpriced() ? " (+ itens sob consulta)" : "") +
+      (temEncomenda
+        ? "\n\n*Itens sob encomenda: verificar políticas e condições para adquirir este produto."
+        : "");
     var url = "https://wa.me/" + config.whatsapp + "?text=" + encodeURIComponent(msg);
     window.open(url, "_blank", "noopener");
   }
@@ -157,7 +164,8 @@
         name: btn.dataset.name,
         price: btn.dataset.price,
         url: btn.dataset.url,
-        image: btn.dataset.image
+        image: btn.dataset.image,
+        madeToOrder: btn.dataset.madeToOrder
       });
       openCart();
     });

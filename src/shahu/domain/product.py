@@ -25,6 +25,7 @@ class Product:
     price: float | None = None
     available: bool = True
     featured: bool = False
+    made_to_order: bool = False  # "sob encomenda"
 
     @property
     def url(self) -> str:

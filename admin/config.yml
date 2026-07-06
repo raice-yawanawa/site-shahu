@@ -76,6 +76,13 @@ collections:
           widget: "boolean",
           default: false,
         }
+      - {
+          label: "Sob encomenda",
+          name: "made_to_order",
+          widget: "boolean",
+          default: false,
+          hint: "Adiciona automaticamente o aviso de encomenda e destaca a peça no carrinho.",
+        }
       - { label: "Descrição", name: "body", widget: "markdown" }
 
   # ------------------------------------------------------ Configurações do site
