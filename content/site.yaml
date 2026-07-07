@@ -27,15 +27,15 @@ home:
           Essa união entre a cidade e a aldeia dá identidade à Shahu Rautihu Keneya, marca criada para valorizar o artesanato, os grafismos e os saberes do povo Yawanawá.
         - Cada peça produzida reflete a riqueza da cultura, da ancestralidade e da história de seu povo. Mais do que adornos, suas criações expressam identidade, memória e o compromisso de preservar e compartilhar uma tradição que continua viva por meio das mãos de duas jovens artesãs Yawanawá.
       photos:
-        - src: /assets/images/brand/Foto Artesãs.jpg
-          alt: Raice e Shane Tsaka (imãs e sócias da SHAHU)
         - src: /assets/images/brand/Raice na Aldeia.png
           alt: Raice (gestora da SHAHU) ornamentada na aldeia Yawanawá
+        - src: /assets/images/brand/Foto Artesãs.jpg
+          alt: Raice e Shane Tsaka (imãs e sócias da SHAHU)
         - src: /assets/images/brand/Shane Tsaka na aldeia.png
           alt: Shane Tsaka (sócia da SHAHU) ornamentada na aldeia Yawanawá
   featured_title: Peças em destaque
   cta_title: Fale comigo
   cta_text: Tem interesse em uma peça ou quer uma encomenda especial? Me chame!
 credits:
-  developer: Camila Cerreti
   developer_url: https://www.linkedin.com/in/camilacc/
+  developer: Camila Cerreti
