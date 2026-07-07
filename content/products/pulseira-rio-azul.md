@@ -9,6 +9,7 @@ images:
   - /assets/images/products/Foto Malha.jpg
 available: true
 featured: true
+featured_order: 3
 made_to_order: true
 ---
 
