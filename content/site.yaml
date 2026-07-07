@@ -19,6 +19,10 @@ home:
         - 'Cada peça é produzida com respeito aos conhecimentos transmitidos pelos ancestrais e às técnicas preservadas pela família das artesãs. Os colares, pulseiras, brincos e demais criações não são apenas adornos: são expressões de uma história, de um modo de viver e de uma cultura que permanece viva por meio de seus símbolos, cores e grafismos.'
         - A SHAHU RAUTIHU KENEYA nasce do encontro entre a tradição e o presente, conectando a aldeia e a cidade para levar ao mundo o artesanato Yawanawá de forma autêntica, valorizando o trabalho das mulheres indígenas e fortalecendo a continuidade dos saberes ancestrais.
         - 'Este projeto é um trabalho voluntário de fomento: cada compra fortalece a preservação da cultura Yawanawá.'
+      photos:
+        - src: /assets/images/brand/Foto Ponte.jpg
+          alt: Povo Yawanawá atravessando ponte do Rio Gregório
+          caption: Povo Yawanawá atravessando ponte do Rio Gregório
     - title: Sobre as artesãs
       paragraphs:
         - Raice Rodrigues Yawanawá e Shane Tsaka Rodrigues Brasil Yawanawá são jovens artesãs do povo Yawanawá que carregam consigo um conhecimento ancestral transmitido de geração em geração. A arte do artesanato foi aprendida com sua mãe, que, por sua vez, herdou esse saber de sua avó, mantendo viva uma tradição familiar profundamente ligada à cultura Yawanawá.
@@ -29,13 +33,16 @@ home:
       photos:
         - src: /assets/images/brand/Raice na Aldeia.png
           alt: Raice (gestora da SHAHU) ornamentada na aldeia Yawanawá
+          caption: Raice (gestora da SHAHU)
         - src: /assets/images/brand/Foto Artesãs.jpg
           alt: Raice e Shane Tsaka (imãs e sócias da SHAHU)
+          caption: Raice e Shane Tsaka
         - src: /assets/images/brand/Shane Tsaka na aldeia.png
           alt: Shane Tsaka (sócia da SHAHU) ornamentada na aldeia Yawanawá
+          caption: Shane Tsaka (sócia da SHAHU)
   featured_title: Peças em destaque
   cta_title: Fale comigo
   cta_text: Tem interesse em uma peça ou quer uma encomenda especial? Me chame!
 credits:
-  developer_url: https://www.linkedin.com/in/camilacc/
   developer: Camila Cerreti
+  developer_url: https://www.linkedin.com/in/camilacc/
