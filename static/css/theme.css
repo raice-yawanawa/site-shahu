@@ -305,6 +305,23 @@ h1, h2, h3 { font-family: var(--fonte-titulo); color: var(--cor-marrom); line-he
   align-items: start;
 }
 
+/* -------------------------------------------------------------- Carrossel */
+.carousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 12px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--cor-terracota) transparent;
+}
+.carousel::-webkit-scrollbar { height: 4px; }
+.carousel::-webkit-scrollbar-thumb { background: var(--cor-terracota); border-radius: 2px; }
+.carousel > .card {
+  flex: 0 0 clamp(180px, 28vw, 240px);
+  scroll-snap-align: start;
+}
+
 /* ------------------------------------------------------------------ Card */
 .card {
   background: var(--branco);
