@@ -245,21 +245,29 @@ h1, h2, h3 { font-family: var(--fonte-titulo); color: var(--cor-marrom); line-he
   border-radius: var(--raio);
   overflow: hidden;
   margin-bottom: 48px;
-  background: linear-gradient(135deg, var(--cor-terracota), var(--cor-marrom));
+  background: var(--cor-marrom);
+  min-height: 420px;
 }
 .hero__bg {
   position: absolute; inset: 0;
   background-size: cover; background-position: center;
-  opacity: 0.5;
+  opacity: 1;
 }
 .hero__inner {
   position: relative;
   text-align: center;
   padding: clamp(40px, 8vw, 88px) 20px;
   color: var(--branco);
-  background: linear-gradient(180deg, rgba(59,36,25,0.15), rgba(59,36,25,0.55));
+  /* degradê horizontal em marca d'água: imagem mostra nas bordas, vela suave no centro destacando título */
+  background: linear-gradient(
+    to right,
+    rgba(59, 36, 25, 0.06) 0%,
+    rgba(59, 36, 25, 0.68) 26%,
+    rgba(59, 36, 25, 0.68) 74%,
+    rgba(59, 36, 25, 0.06) 100%
+  );
 }
-.hero__logo { width: 220px; height: 220px; border-radius: 50%; margin: 0 auto 20px; border: 3px solid rgba(255,255,255,0.7); }
+.hero__logo { width: 260px; height: 260px; border-radius: 50%; margin: 0 auto 20px; border: 3px solid rgba(255,255,255,0.7); }
 .hero__title { color: var(--branco); font-size: clamp(2rem, 5vw, 3.4rem); margin: 0 0 10px; }
 .hero__subtitle { max-width: 620px; margin: 0 auto 26px; font-size: 1.1rem; }
 .hero__cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
