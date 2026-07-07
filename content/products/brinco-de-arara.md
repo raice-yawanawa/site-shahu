@@ -9,6 +9,7 @@ images:
   - /assets/images/products/pasted-image-1783442106108.png
 available: true
 featured: true
+featured_order: 2
 made_to_order: true
 ---
 
