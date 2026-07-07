@@ -1,11 +1,12 @@
 ---
-name: "Colar Tucum Ancestral"
-price: 189.90
-category: "joias"
-subcategory: "colares"
+name: Colar Tucum Ancestral
+price: 189.9
+category: vestuario
+subcategory: colares
 images: []
-available: true
-featured: true
+available: false
+featured: false
+made_to_order: false
 ---
 
 Colar feito à mão com sementes de **tucum** e miçangas, seguindo grafismos ancestrais.
