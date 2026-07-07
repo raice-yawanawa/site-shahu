@@ -7,6 +7,47 @@ projeto adota [Versionamento Semântico](https://semver.org/lang/pt-BR/).
 
 ## [Não lançado]
 
+## [1.2.0] - 2026-07-07
+
+### Adicionado
+- **Imagem de textura** de miçangas como fundo do hero com degradê horizontal em marca
+  d'água — véu suave no centro destaca título e subtítulo sem esconder a trama.
+- **Carrossel de imagens** na página de produto: foto em destaque + faixa de miniaturas
+  clicáveis abaixo; botões ← → sobrepostos e navegação por teclado (← →).
+- **Seção de histórias múltiplas** na home: cada história tem título, parágrafos e fotos
+  próprios, empilhados em ordem — permite criar tantos blocos quanto necessário pelo CMS.
+- **Fotos por história**: campo de fotos opcional em cada bloco de história; as imagens
+  aparecem logo abaixo do texto, permitindo intercalar fotos entre histórias.
+- **Legenda opcional** por foto nas histórias: texto discreto (itálico, alinhado à
+  esquerda) exibido abaixo de cada imagem; configurável pelo CMS.
+- **Carrossel horizontal** nas "Peças em destaque" da home: linha única com scroll lateral,
+  snap suave e scrollbar terracota.
+- **Campo "Posição no destaque"** (`featured_order`) nas peças: número inteiro que define
+  a ordem dos cards no carrossel (1 = primeiro); sem número → vai ao final em ordem
+  alfabética. Configurável pelo CMS.
+
+### Alterado
+
+- Logo do hero ampliada de 220 px para 260 px para melhor legibilidade da marca.
+- Fotos das histórias centralizadas verticalmente entre si (`align-items: center`),
+  eliminando o efeito escada entre imagens de alturas diferentes.
+- Fotos das histórias exibidas na proporção original, sem corte.
+- Cards de produto nas coleções mantêm proporção 4:5 fixo (reversão intencional).
+
+### Corrigido
+
+- Espaço vazio abaixo de fotos menores no grid de histórias (células não mais se esticam
+  para igualar a altura da maior).
+- `overflow: hidden` movido para wrapper interno da imagem, liberando `<figcaption>` de
+  legenda de ser cortado pelo container.
+- Linha longa em `repository.py` corrigida para passar no linter `ruff` (E501).
+
+### Conteúdo (via CMS)
+
+- Peças cadastradas: colares, brincos e pulseiras adicionados ao catálogo.
+- Textos da história da marca e das artesãs atualizados.
+- Segunda história ("Sobre as artesãs") criada com fotos das fundadoras.
+
 ## [1.1.0] - 2026-07-06
 
 ### Adicionado
@@ -62,7 +103,8 @@ projeto adota [Versionamento Semântico](https://semver.org/lang/pt-BR/).
 - Workflow de CI/CD (GitHub Actions) para build e deploy automáticos.
 - Documentação técnica, design system e guia de conteúdo em `docs/`.
 
-[Não lançado]: https://github.com/raice-yawanawa/site-shahu/compare/v1.1.0...HEAD
+[Não lançado]: https://github.com/raice-yawanawa/site-shahu/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/raice-yawanawa/site-shahu/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/raice-yawanawa/site-shahu/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/raice-yawanawa/site-shahu/compare/v0.1.0...v1.0.0
 [0.1.0]: https://github.com/raice-yawanawa/site-shahu/releases/tag/v0.1.0
