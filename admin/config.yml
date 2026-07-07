@@ -141,15 +141,18 @@ collections:
                   widget: "image",
                   required: false,
                 }
-              - {
-                  label: "Título da história",
-                  name: "story_title",
-                  widget: "string",
-                }
-              - label: "Parágrafos da história"
-                name: "story_paragraphs"
+              - label: "Histórias"
+                name: "stories"
                 widget: "list"
-                field: { label: "Parágrafo", name: "paragrafo", widget: "text" }
+                label_singular: "História"
+                hint: "Adicione quantas seções de história desejar. Cada uma tem título e parágrafos próprios."
+                fields:
+                  - { label: "Título", name: "title", widget: "string" }
+                  - label: "Parágrafos"
+                    name: "paragraphs"
+                    widget: "list"
+                    label_singular: "Parágrafo"
+                    field: { label: "Parágrafo", name: "paragrafo", widget: "text" }
               - label: "Fotos da autora/peças"
                 name: "author_photos"
                 widget: "list"

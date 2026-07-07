@@ -36,8 +36,9 @@ def _make_project(tmp_path):
               hero_title: "Arte à mão"
               hero_subtitle: "Sub"
               hero_image: "/h.jpg"
-              story_title: "História"
-              story_paragraphs: ["Um parágrafo."]
+              stories:
+                - title: "História"
+                  paragraphs: ["Um parágrafo."]
               author_photos: []
               featured_title: "Destaques"
               cta_title: "Contato"

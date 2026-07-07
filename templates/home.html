@@ -12,24 +12,29 @@
   </div>
 </section>
 
+{% for story in home.stories %}
 <section class="story">
-  <h2 class="section-title">{{ home.story_title }}</h2>
-  <div class="story__grid">
-    <div class="story__text">
-      {% for p in home.story_paragraphs %}
-      <p>{{ p }}</p>
-      {% endfor %}
-    </div>
-    <div class="story__photos">
-      {% for photo in home.author_photos %}
-      <figure class="story__photo">
-        <img src="{{ url(photo.src) }}" alt="{{ photo.alt }}" loading="lazy"
-             onerror="this.src='{{ url('/static/img/placeholder.svg') }}'">
-      </figure>
-      {% endfor %}
-    </div>
+  <h2 class="section-title">{{ story.title }}</h2>
+  <div class="story__text">
+    {% for p in story.paragraphs %}
+    <p>{{ p }}</p>
+    {% endfor %}
   </div>
 </section>
+{% endfor %}
+
+{% if home.author_photos %}
+<section class="story-photos">
+  <div class="story-photos__grid">
+    {% for photo in home.author_photos %}
+    <figure class="story__photo">
+      <img src="{{ url(photo.src) }}" alt="{{ photo.alt }}" loading="lazy"
+           onerror="this.src='{{ url('/static/img/placeholder.svg') }}'">
+    </figure>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
 
 {% if featured_products %}
 <section class="featured">

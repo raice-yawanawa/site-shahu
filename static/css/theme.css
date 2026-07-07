@@ -273,10 +273,14 @@ h1, h2, h3 { font-family: var(--fonte-titulo); color: var(--cor-marrom); line-he
 .hero__cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 
 /* ---------------------------------------------------------------- História */
-.story { margin-bottom: 56px; }
-.story__grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 32px; align-items: start; }
+.story { margin-bottom: 40px; }
 .story__text p { margin: 0 0 16px; font-size: 1.05rem; }
-.story__photos { display: grid; gap: 16px; }
+.story-photos { margin-bottom: 56px; }
+.story-photos__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
 .story__photo { margin: 0; border-radius: var(--raio); overflow: hidden; box-shadow: var(--sombra-suave); }
 .story__photo img { width: 100%; height: auto; display: block; }
 
