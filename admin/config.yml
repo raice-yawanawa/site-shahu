@@ -162,6 +162,7 @@ collections:
                     fields:
                       - { label: "Imagem", name: "src", widget: "image" }
                       - { label: "Texto alternativo", name: "alt", widget: "string" }
+                      - { label: "Legenda (opcional)", name: "caption", widget: "string", required: false, hint: "Aparece abaixo da foto em texto discreto." }
               - {
                   label: "Título dos destaques",
                   name: "featured_title",

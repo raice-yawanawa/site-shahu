@@ -280,10 +280,21 @@ h1, h2, h3 { font-family: var(--fonte-titulo); color: var(--cor-marrom); line-he
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 16px;
-  align-items: start;
+  align-items: center;
 }
-.story__photo { margin: 0; border-radius: var(--raio); overflow: hidden; box-shadow: var(--sombra-suave); }
+.story__photo { margin: 0; }
+.story__photo__frame { border-radius: var(--raio); overflow: hidden; box-shadow: var(--sombra-suave); }
 .story__photo img { width: 100%; height: auto; display: block; }
+.story__caption {
+  margin-top: 7px;
+  padding: 0 3px;
+  font-size: 0.78rem;
+  font-style: italic;
+  color: var(--cor-marrom-suave);
+  opacity: 0.72;
+  text-align: left;
+  line-height: 1.4;
+}
 
 /* ------------------------------------------------------------------ Grid */
 .featured { margin-bottom: 56px; }
