@@ -305,7 +305,7 @@ h1, h2, h3 { font-family: var(--fonte-titulo); color: var(--cor-marrom); line-he
 }
 .card:hover { box-shadow: var(--sombra); transform: translateY(-3px); }
 .card__media { position: relative; display: block; }
-.card__img { width: 100%; height: auto; display: block; background: var(--cor-bege); }
+.card__img { width: 100%; aspect-ratio: 4/5; object-fit: cover; background: var(--cor-bege); }
 .card__body { padding: 14px 16px 18px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
 .card__name { margin: 0; font-size: 1.25rem; font-weight: 600; }
 .card__name a { color: var(--cor-marrom); }
