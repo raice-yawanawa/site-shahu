@@ -6,23 +6,28 @@ brand:
 contact:
   whatsapp: '5568992554710'
   instagram: raissa_yawanawa
-credits:
-  developer: Camila Cerreti
-  developer_url: https://www.linkedin.com/in/camilacc/
 home:
   hero_title: Arte indígena feita à mão
   hero_subtitle: Cada peça carrega a identidade e os grafismos do meu povo Yawanawá.
   hero_image: /assets/images/brand/hero.jpg
-  story_title: A história por trás da SHAHU
+  story_title: A história da SHAHU
   story_paragraphs:
-    - A SHAHU RAUTIHU KENEYA nasce do desejo de manter viva a arte e a ancestralidade do meu povo. Cada colar, brinco, pulseira e gravura é feito à mão, com técnicas passadas de geração em geração.
-    - Trabalho com sementes, fibras e grafismos que contam histórias — de cura, de floresta, de resistência. Ao levar uma peça, você apoia diretamente a arte indígena e ajuda a preservar esse conhecimento.
-    - 'Este é um trabalho voluntário de apoio: cada compra fortalece a preservação da cultura Yawanawá.'
+    - |-
+      A SHAHU RAUTIHU KENEYA é uma marca criada para valorizar, preservar e compartilhar a riqueza da cultura do povo Yawanawá por meio do artesanato tradicional.
+      Seu nome reúne três palavras da língua Yawanawá que expressam a essência da marca: SHAHU significa mulher, RAUTIHU significa artesanato e KENEYA significa grafismo ou desenho do povo Yawanawá. Juntas, elas representam a força das mulheres indígenas, a arte ancestral e os grafismos que carregam a identidade cultural do povo Yawanawá.
+    - 'Cada peça é produzida com respeito aos conhecimentos transmitidos pelos ancestrais e às técnicas preservadas pela família das artesãs. Os colares, pulseiras, brincos e demais criações não são apenas adornos: são expressões de uma história, de um modo de viver e de uma cultura que permanece viva por meio de seus símbolos, cores e grafismos.'
+    - A SHAHU RAUTIHU KENEYA nasce do encontro entre a tradição e o presente, conectando a aldeia e a cidade para levar ao mundo o artesanato Yawanawá de forma autêntica, valorizando o trabalho das mulheres indígenas e fortalecendo a continuidade dos saberes ancestrais.
+    - 'Este projeto é um trabalho voluntário de fomento: cada compra fortalece a preservação da cultura Yawanawá.'
   author_photos:
-    - src: /assets/images/brand/autora-1.jpg
-      alt: A artesã trabalhando em uma peça
-    - src: /assets/images/brand/pecas-1.jpg
-      alt: Peças de artesanato em exposição
+    - src: /assets/images/brand/Foto Artesãs.jpg
+      alt: Raice e Shane Tsaka (imãs e sócias da SHAHU)
+    - src: /assets/images/brand/Raice na Aldeia.png
+      alt: Raice (gestora da SHAHU) ornamentada na aldeia Yawanawá
+    - src: /assets/images/brand/Shane Tsaka na aldeia.png
+      alt: Shane Tsaka (sócia da SHAHU) ornamentada na aldeia Yawanawá
   featured_title: Peças em destaque
   cta_title: Fale comigo
   cta_text: Tem interesse em uma peça ou quer uma encomenda especial? Me chame!
+credits:
+  developer_url: https://www.linkedin.com/in/camilacc/
+  developer: Camila Cerreti
