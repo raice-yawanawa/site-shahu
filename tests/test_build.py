@@ -39,7 +39,7 @@ def _make_project(tmp_path):
               stories:
                 - title: "História"
                   paragraphs: ["Um parágrafo."]
-              author_photos: []
+                  photos: []
               featured_title: "Destaques"
               cta_title: "Contato"
               cta_text: "Fale comigo."

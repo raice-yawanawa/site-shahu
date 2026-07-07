@@ -26,13 +26,13 @@ home:
           Embora vivam em contextos diferentes, as duas compartilham o mesmo propósito. Raice vive em contexto urbano, onde busca ampliar seus conhecimentos e fortalecer a valorização da cultura indígena por meio do artesanato. Já Shane Tsaka vive na aldeia, mantendo uma relação cotidiana com o território, a natureza e os ensinamentos tradicionais do povo Yawanawá.
           Essa união entre a cidade e a aldeia dá identidade à Shahu Rautihu Keneya, marca criada para valorizar o artesanato, os grafismos e os saberes do povo Yawanawá.
         - Cada peça produzida reflete a riqueza da cultura, da ancestralidade e da história de seu povo. Mais do que adornos, suas criações expressam identidade, memória e o compromisso de preservar e compartilhar uma tradição que continua viva por meio das mãos de duas jovens artesãs Yawanawá.
-  author_photos:
-    - src: /assets/images/brand/Foto Artesãs.jpg
-      alt: Raice e Shane Tsaka (imãs e sócias da SHAHU)
-    - src: /assets/images/brand/Raice na Aldeia.png
-      alt: Raice (gestora da SHAHU) ornamentada na aldeia Yawanawá
-    - src: /assets/images/brand/Shane Tsaka na aldeia.png
-      alt: Shane Tsaka (sócia da SHAHU) ornamentada na aldeia Yawanawá
+      photos:
+        - src: /assets/images/brand/Foto Artesãs.jpg
+          alt: Raice e Shane Tsaka (imãs e sócias da SHAHU)
+        - src: /assets/images/brand/Raice na Aldeia.png
+          alt: Raice (gestora da SHAHU) ornamentada na aldeia Yawanawá
+        - src: /assets/images/brand/Shane Tsaka na aldeia.png
+          alt: Shane Tsaka (sócia da SHAHU) ornamentada na aldeia Yawanawá
   featured_title: Peças em destaque
   cta_title: Fale comigo
   cta_text: Tem interesse em uma peça ou quer uma encomenda especial? Me chame!

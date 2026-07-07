@@ -20,21 +20,18 @@
     <p>{{ p }}</p>
     {% endfor %}
   </div>
-</section>
-{% endfor %}
-
-{% if home.author_photos %}
-<section class="story-photos">
+  {% if story.get('photos') %}
   <div class="story-photos__grid">
-    {% for photo in home.author_photos %}
+    {% for photo in story.photos %}
     <figure class="story__photo">
       <img src="{{ url(photo.src) }}" alt="{{ photo.alt }}" loading="lazy"
            onerror="this.src='{{ url('/static/img/placeholder.svg') }}'">
     </figure>
     {% endfor %}
   </div>
+  {% endif %}
 </section>
-{% endif %}
+{% endfor %}
 
 {% if featured_products %}
 <section class="featured">

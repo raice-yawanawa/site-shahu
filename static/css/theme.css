@@ -275,8 +275,8 @@ h1, h2, h3 { font-family: var(--fonte-titulo); color: var(--cor-marrom); line-he
 /* ---------------------------------------------------------------- História */
 .story { margin-bottom: 40px; }
 .story__text p { margin: 0 0 16px; font-size: 1.05rem; }
-.story-photos { margin-bottom: 56px; }
 .story-photos__grid {
+  margin-top: 24px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 16px;
