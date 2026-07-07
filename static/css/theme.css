@@ -278,7 +278,7 @@ h1, h2, h3 { font-family: var(--fonte-titulo); color: var(--cor-marrom); line-he
 .story__text p { margin: 0 0 16px; font-size: 1.05rem; }
 .story__photos { display: grid; gap: 16px; }
 .story__photo { margin: 0; border-radius: var(--raio); overflow: hidden; box-shadow: var(--sombra-suave); }
-.story__photo img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+.story__photo img { width: 100%; height: auto; display: block; }
 
 /* ------------------------------------------------------------------ Grid */
 .featured { margin-bottom: 56px; }
