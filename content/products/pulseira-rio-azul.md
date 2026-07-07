@@ -1,11 +1,14 @@
 ---
-name: "Pulseira Rio Azul"
-price: 59.90
-category: "joias"
-subcategory: "pulseiras"
-images: []
-available: false
-featured: false
+name: Pulseira Flecha - Paspí
+price: 300
+category: joias
+subcategory: pulseiras
+images:
+  - /assets/images/products/pasted-image-1783440952596.png
+  - /assets/images/products/pasted-image-1783440968770.png
+available: true
+featured: true
+made_to_order: true
 ---
 
-Pulseira trançada à mão em tons de azul pastel, remetendo às águas dos rios.
+Pulseira de micro miçangas trançada à mão com o grafismo do Paspí, que é a flecha usada pelo nosso povo Yawanawá
