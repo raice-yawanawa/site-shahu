@@ -6,6 +6,7 @@ subcategory: pulseiras
 images:
   - /assets/images/products/pasted-image-1783440952596.png
   - /assets/images/products/pasted-image-1783440968770.png
+  - /assets/images/products/Foto Malha.jpg
 available: true
 featured: true
 made_to_order: true
