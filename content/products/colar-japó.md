@@ -6,7 +6,7 @@ subcategory: colares
 images:
   - /assets/images/products/IMG_4710.jpg
   - /assets/images/products/IMG_4712.jpg
-available: false
+available: true
 featured: true
 made_to_order: true
 ---
