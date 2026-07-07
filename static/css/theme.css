@@ -324,9 +324,55 @@ h1, h2, h3 { font-family: var(--fonte-titulo); color: var(--cor-marrom); line-he
 
 /* ------------------------------------------------------------- Produto */
 .product { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: start; }
-.product__gallery { display: grid; gap: 16px; }
-.product__photo { margin: 0; border-radius: var(--raio); overflow: hidden; background: var(--cor-bege); box-shadow: var(--sombra-suave); }
-.product__photo img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+
+/* ---- Galeria carrossel ---- */
+.product__gallery { display: flex; flex-direction: column; gap: 10px; }
+
+.gallery__main {
+  position: relative;
+  border-radius: var(--raio);
+  overflow: hidden;
+  background: var(--cor-bege);
+  box-shadow: var(--sombra-suave);
+}
+.gallery__main img {
+  width: 100%; height: auto; display: block;
+  max-height: 540px;
+  object-fit: contain;
+  transition: opacity 0.18s ease;
+}
+.gallery__main img.gallery--fade { opacity: 0; }
+
+.gallery__nav {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: rgba(59,36,25,0.52); color: var(--branco);
+  border: none; width: 40px; height: 40px; border-radius: 50%;
+  font-size: 1.6rem; line-height: 1; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.18s; z-index: 2;
+}
+.gallery__nav:hover { background: rgba(59,36,25,0.85); }
+.gallery__nav--prev { left: 10px; }
+.gallery__nav--next { right: 10px; }
+
+.gallery__thumbs {
+  display: flex; gap: 8px;
+  overflow-x: auto; padding-bottom: 4px;
+  scrollbar-width: thin; scrollbar-color: var(--cor-terracota) transparent;
+}
+.gallery__thumbs::-webkit-scrollbar { height: 4px; }
+.gallery__thumbs::-webkit-scrollbar-thumb { background: var(--cor-terracota); border-radius: 2px; }
+
+.gallery__thumb {
+  flex: 0 0 72px; width: 72px; height: 72px;
+  border: 2px solid transparent; border-radius: var(--raio-sm);
+  overflow: hidden; cursor: pointer;
+  background: var(--cor-bege); padding: 0;
+  opacity: 0.55; transition: opacity 0.18s, border-color 0.18s;
+}
+.gallery__thumb:hover { opacity: 0.85; }
+.gallery__thumb--active { border-color: var(--cor-terracota); opacity: 1; }
+.gallery__thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .product__name { font-size: clamp(2rem, 4vw, 2.8rem); margin: 0 0 8px; }
 .product__price { font-size: 1.5rem; font-weight: 600; color: var(--cor-terracota-escuro); margin: 0 0 20px; }
 .product__add { margin-bottom: 24px; }

@@ -22,12 +22,29 @@
 
 <article class="product">
   <div class="product__gallery">
-    {% for img in gallery %}
-    <figure class="product__photo">
-      <img src="{{ url(img) }}" alt="{{ product.name }}"
+    <div class="gallery__main">
+      <img id="gallery-active"
+           src="{{ url(gallery[0]) }}"
+           alt="{{ product.name }}"
            onerror="this.src='{{ url('/static/img/placeholder.svg') }}'">
-    </figure>
-    {% endfor %}
+      {% if gallery|length > 1 %}
+      <button class="gallery__nav gallery__nav--prev" aria-label="Foto anterior">&#8249;</button>
+      <button class="gallery__nav gallery__nav--next" aria-label="Próxima foto">&#8250;</button>
+      {% endif %}
+    </div>
+    {% if gallery|length > 1 %}
+    <div class="gallery__thumbs" role="list">
+      {% for img in gallery %}
+      <button class="gallery__thumb{% if loop.first %} gallery__thumb--active{% endif %}"
+              data-gallery-thumb="{{ url(img) }}"
+              aria-label="Ver foto {{ loop.index }}"
+              role="listitem">
+        <img src="{{ url(img) }}" alt="{{ product.name }} — foto {{ loop.index }}"
+             onerror="this.src='{{ url('/static/img/placeholder.svg') }}'">
+      </button>
+      {% endfor %}
+    </div>
+    {% endif %}
   </div>
 
   <div class="product__info">
