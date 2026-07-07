@@ -33,8 +33,11 @@ class Catalog:
         ]
 
     def featured(self) -> list[Product]:
-        """Peças marcadas como destaque e disponíveis (para a home)."""
-        return [p for p in self.products if p.featured and p.available]
+        """Peças marcadas como destaque, ordenadas por featured_order (None = fim)."""
+        return sorted(
+            [p for p in self.products if p.featured and p.available],
+            key=lambda p: (p.featured_order is None, p.featured_order or 0, p.name.casefold()),
+        )
 
     def count_in_category(self, category_slug: str) -> int:
         return sum(1 for p in self.products if p.category == category_slug)

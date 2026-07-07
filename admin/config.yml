@@ -78,6 +78,15 @@ collections:
           default: false,
         }
       - {
+          label: "Posição no destaque",
+          name: "featured_order",
+          widget: "number",
+          required: false,
+          value_type: "int",
+          min: 1,
+          hint: "Ordem no carrossel de destaques (1 = primeiro). Deixe vazio para sem prioridade.",
+        }
+      - {
           label: "Sob encomenda",
           name: "made_to_order",
           widget: "boolean",

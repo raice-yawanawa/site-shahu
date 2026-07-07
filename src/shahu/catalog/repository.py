@@ -81,6 +81,7 @@ def load_products(products_dir: Path) -> list[Product]:
                 available=bool(meta.get("available", True)),
                 featured=bool(meta.get("featured", False)),
                 made_to_order=bool(meta.get("made_to_order", False)),
+                featured_order=int(meta["featured_order"]) if meta.get("featured_order") is not None else None,
             )
         )
     return sorted(products, key=lambda p: p.name.casefold())
