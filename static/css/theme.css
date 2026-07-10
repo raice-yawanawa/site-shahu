@@ -506,6 +506,7 @@ h1, h2, h3 { font-family: var(--fonte-titulo); color: var(--cor-marrom); line-he
 .cart__total { display: flex; justify-content: space-between; font-size: 1.15rem; margin-bottom: 4px; }
 .cart__total strong { font-family: var(--fonte-titulo); }
 .cart__shipping-line { display: flex; justify-content: space-between; font-size: 0.82rem; color: var(--cor-marrom-suave); margin-bottom: 8px; }
+.cart__shipping-line[hidden] { display: none; }
 .cart__note { font-size: 0.8rem; color: var(--cor-marrom-suave); margin: 0 0 14px; }
 
 /* -------------------------------------------------------------- Responsivo */
