@@ -18,7 +18,6 @@ home:
           Seu nome reúne três palavras da língua Yawanawá que expressam a essência da marca: SHAHU significa mulher, RAUTIHU significa artesanato e KENEYA significa grafismo ou desenho do povo Yawanawá. Juntas, elas representam a força das mulheres indígenas, a arte ancestral e os grafismos que carregam a identidade cultural do povo Yawanawá.
         - 'Cada peça é produzida com respeito aos conhecimentos transmitidos pelos ancestrais e às técnicas preservadas pela família das artesãs. Os colares, pulseiras, brincos e demais criações não são apenas adornos: são expressões de uma história, de um modo de viver e de uma cultura que permanece viva por meio de seus símbolos, cores e grafismos.'
         - A SHAHU RAUTIHU KENEYA nasce do encontro entre a tradição e o presente, conectando a aldeia e a cidade para levar ao mundo o artesanato Yawanawá de forma autêntica, valorizando o trabalho das mulheres indígenas e fortalecendo a continuidade dos saberes ancestrais.
-        - 'Este projeto é um trabalho voluntário de fomento: cada compra fortalece a preservação da cultura Yawanawá.'
       photos:
         - src: /assets/images/brand/Foto Ponte.jpg
           alt: Povo Yawanawá atravessando ponte do Rio Gregório
@@ -40,9 +39,13 @@ home:
         - src: /assets/images/brand/Shane Tsaka na aldeia.png
           alt: Shane Tsaka (sócia da SHAHU) ornamentada na aldeia Yawanawá
           caption: Shane Tsaka (sócia da SHAHU)
+    - title: ''
+      paragraphs:
+        - 'Este projeto é um trabalho voluntário de fomento: cada compra fortalece a preservação da cultura Yawanawá.'
+      photos: []
   featured_title: Peças em destaque
   cta_title: Fale comigo
   cta_text: Tem interesse em uma peça ou quer uma encomenda especial? Me chame!
 credits:
-  developer_url: https://www.linkedin.com/in/camilacc/
   developer: Camila Cerreti
+  developer_url: https://www.linkedin.com/in/camilacc/
