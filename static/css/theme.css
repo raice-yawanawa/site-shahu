@@ -482,9 +482,30 @@ h1, h2, h3 { font-family: var(--fonte-titulo); color: var(--cor-marrom); line-he
 .cart-item__qty button { width: 26px; height: 26px; border-radius: 50%; border: 1px solid rgba(59,36,25,0.25); background: var(--branco); cursor: pointer; font-size: 1rem; color: var(--cor-marrom); }
 .cart-item__remove { background: none; border: none; color: var(--cor-terracota-escuro); cursor: pointer; font-size: 0.8rem; }
 
+/* ----------------------------------------------------------- Frete carrinho */
+.shipping { padding: 14px 20px; border-top: 1px solid rgba(59,36,25,0.1); background: var(--cor-bege-claro); }
+.shipping[hidden] { display: none; }
+.shipping__title { font-size: 0.82rem; font-weight: 600; color: var(--cor-marrom); margin: 0 0 8px; text-transform: uppercase; letter-spacing: .04em; }
+.shipping__row { display: flex; gap: 8px; }
+.shipping__cep { flex: 1; padding: 8px 11px; border: 1.5px solid rgba(59,36,25,0.2); border-radius: var(--raio-sm); font-size: 0.9rem; font-family: var(--fonte-corpo); background: var(--branco); outline: none; }
+.shipping__cep:focus { border-color: var(--cor-terracota); }
+.shipping__btn { padding: 8px 14px; background: var(--cor-terracota); color: var(--branco); border: none; border-radius: var(--raio-sm); cursor: pointer; font-size: 0.82rem; font-weight: 600; white-space: nowrap; transition: background .18s; }
+.shipping__btn:hover { background: var(--cor-terracota-escuro); }
+.shipping__btn:disabled { opacity: .55; cursor: default; }
+.shipping__error { font-size: 0.78rem; color: #b94a48; margin: 6px 0 0; }
+.shipping__options { display: flex; flex-direction: column; gap: 7px; margin-top: 12px; }
+.shipping__option { display: flex; align-items: center; gap: 10px; padding: 9px 13px; border: 1.5px solid rgba(59,36,25,0.15); border-radius: var(--raio-sm); cursor: pointer; transition: border-color .15s, background .15s; background: var(--branco); }
+.shipping__option:hover { border-color: var(--cor-terracota); }
+.shipping__option--active { border-color: var(--cor-terracota); background: #fdf6f0; }
+.shipping__radio { width: 15px; height: 15px; accent-color: var(--cor-terracota); flex-shrink: 0; cursor: pointer; }
+.shipping__option-label { flex: 1; font-size: 0.87rem; color: var(--cor-marrom); }
+.shipping__option-price { font-size: 0.87rem; font-weight: 700; color: var(--cor-terracota-escuro); white-space: nowrap; }
+.shipping__hint { font-size: 0.7rem; color: var(--cor-marrom-suave); margin-top: 8px; opacity: .65; }
+
 .cart__footer { padding: 18px 22px 24px; border-top: 1px solid rgba(59,36,25,0.12); background: var(--cor-bege); }
-.cart__total { display: flex; justify-content: space-between; font-size: 1.15rem; margin-bottom: 8px; }
+.cart__total { display: flex; justify-content: space-between; font-size: 1.15rem; margin-bottom: 4px; }
 .cart__total strong { font-family: var(--fonte-titulo); }
+.cart__shipping-line { display: flex; justify-content: space-between; font-size: 0.82rem; color: var(--cor-marrom-suave); margin-bottom: 8px; }
 .cart__note { font-size: 0.8rem; color: var(--cor-marrom-suave); margin: 0 0 14px; }
 
 /* -------------------------------------------------------------- Responsivo */

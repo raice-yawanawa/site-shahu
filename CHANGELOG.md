@@ -7,6 +7,23 @@ projeto adota [Versionamento Semântico](https://semver.org/lang/pt-BR/).
 
 ## [Não lançado]
 
+## [1.3.0] - 2026-07-10
+
+### Adicionado
+- **Calculadora de frete** no drawer do carrinho: campo de CEP com máscara automática
+  (XXXXX-XXX), botão "Estimar" que consulta a API pública ViaCEP para identificar o
+  estado de destino, e exibe três opções selecionáveis:
+  - **Retirar comigo (a combinar)** — grátis;
+  - **PAC** — valor estimado para ~300 g, origem Rio Branco/AC;
+  - **SEDEX** — valor estimado para ~300 g, origem Rio Branco/AC.
+- Tabela estática de preços Correios 2024/2025 embutida no JS para os 27 estados.
+- O frete selecionado é somado ao total do carrinho e exibido em linha separada no
+  rodapé da gaveta.
+- A mensagem enviada pelo WhatsApp inclui bloco de frete:
+  `🚚 Previsão de frete: PAC — R$ 36,50 (CEP 01310-100/SP)` ou
+  `🚚 Entrega: Retirada com a artesã (a combinar)`.
+- Seção de frete se oculta automaticamente quando o carrinho está vazio.
+
 ## [1.2.0] - 2026-07-07
 
 ### Adicionado

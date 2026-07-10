@@ -18,10 +18,25 @@
 
   <p class="cart__empty" data-cart-empty>Seu carrinho está vazio.</p>
 
+  <div class="shipping" data-shipping>
+    <p class="shipping__title">Calcular frete</p>
+    <div class="shipping__row">
+      <input class="shipping__cep" type="text" inputmode="numeric" maxlength="9"
+             placeholder="00000-000" aria-label="CEP de destino" data-shipping-cep>
+      <button class="shipping__btn" type="button" data-shipping-calc>Estimar</button>
+    </div>
+    <p class="shipping__error" data-shipping-error hidden></p>
+    <div class="shipping__options" data-shipping-options hidden></div>
+  </div>
+
   <div class="cart__footer">
     <div class="cart__total">
       <span>Total</span>
       <strong data-cart-total>R$ 0,00</strong>
+    </div>
+    <div class="cart__shipping-line" data-cart-shipping-line hidden>
+      <span data-cart-shipping-label></span>
+      <span data-cart-shipping-value></span>
     </div>
     <p class="cart__note">
       A compra é finalizada pelo WhatsApp, em contato direto comigo — enviamos seu pedido
