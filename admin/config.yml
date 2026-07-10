@@ -156,7 +156,7 @@ collections:
                 label_singular: "História"
                 hint: "Adicione quantas seções desejar. As fotos de cada história aparecem logo abaixo do seu texto."
                 fields:
-                  - { label: "Título", name: "title", widget: "string" }
+                  - { label: "Título (opcional)", name: "title", widget: "string", required: false }
                   - label: "Parágrafos"
                     name: "paragraphs"
                     widget: "list"

@@ -14,7 +14,7 @@
 
 {% for story in home.stories %}
 <section class="story">
-  <h2 class="section-title">{{ story.title }}</h2>
+  {% if story.get('title') %}<h2 class="section-title">{{ story.title }}</h2>{% endif %}
   <div class="story__text">
     {% for p in story.paragraphs %}
     <p>{{ p }}</p>

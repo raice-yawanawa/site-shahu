@@ -110,6 +110,9 @@
   function clear() {
     items = [];
     resetShipping();
+    if (el.shippingCepInput) el.shippingCepInput.value = "";
+    if (el.shippingOptions) { el.shippingOptions.innerHTML = ""; el.shippingOptions.hidden = true; }
+    if (el.shippingError) el.shippingError.hidden = true;
     persistAndRender();
   }
 
@@ -268,7 +271,7 @@
 
     var hint = document.createElement("p");
     hint.className = "shipping__hint";
-    hint.textContent = "Estimativa para ~300 g · postado em Rio Branco/AC · Correios 2024/25";
+    hint.textContent = "Estimativa para ~300 g · postado em Rio Branco/AC";
     el.shippingOptions.appendChild(hint);
 
     el.shippingOptions.hidden = false;
