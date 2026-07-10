@@ -109,10 +109,6 @@
 
   function clear() {
     items = [];
-    resetShipping();
-    if (el.shippingCepInput) el.shippingCepInput.value = "";
-    if (el.shippingOptions) { el.shippingOptions.innerHTML = ""; el.shippingOptions.hidden = true; }
-    if (el.shippingError) el.shippingError.hidden = true;
     persistAndRender();
   }
 
@@ -222,7 +218,18 @@
     }
   }
 
-  function persistAndRender() { save(items); render(); }
+  function clearShippingUi() {
+    resetShipping();
+    if (el.shippingCepInput) el.shippingCepInput.value = "";
+    if (el.shippingOptions) { el.shippingOptions.innerHTML = ""; el.shippingOptions.hidden = true; }
+    if (el.shippingError) el.shippingError.hidden = true;
+  }
+
+  function persistAndRender() {
+    save(items);
+    if (items.length === 0) clearShippingUi();
+    render();
+  }
 
   // ---------------------------------------------------------------- Cálculo de frete
   function formatCep(raw) {
