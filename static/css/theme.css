@@ -291,14 +291,16 @@ h1, h2, h3 { font-family: var(--fonte-titulo); color: var(--cor-marrom); line-he
 .hero__cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 
 /* ---------------------------------------------------------------- História */
-.story { margin-bottom: 40px; }
+.story { margin-bottom: 48px; }
+.story__body { display: flex; gap: 32px; align-items: flex-start; }
+.story__text { flex: 1; min-width: 0; }
 .story__text p { margin: 0 0 16px; font-size: 1.05rem; }
-.story-photos__grid {
-  margin-top: 24px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
-  align-items: center;
+.story-photos__sidebar {
+  flex: 0 0 240px;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 .story__photo { margin: 0; }
 .story__photo__frame { border-radius: var(--raio); overflow: hidden; box-shadow: var(--sombra-suave); }
@@ -556,6 +558,8 @@ h1, h2, h3 { font-family: var(--fonte-titulo); color: var(--cor-marrom); line-he
   }
   .sidebar.is-open { transform: translateX(0); }
 
-  .story__grid { grid-template-columns: 1fr; }
+  .story__body { flex-direction: column; }
+  .story-photos__sidebar { flex: none; width: 100%; flex-direction: row; flex-wrap: wrap; }
+  .story__photo { flex: 0 0 calc(50% - 7px); }
   .product { grid-template-columns: 1fr; }
 }
