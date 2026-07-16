@@ -32,7 +32,7 @@
       {% for p in story.paragraphs %}
       <p>{{ p }}</p>
       {% endfor %}
-      {% if is_last and not story.get('photos') %}
+      {% if is_last %}
       <a class="btn btn--outline-marrom story__cta-btn" href="{{ url('/sobre/') }}">Conheça nossa história →</a>
       {% endif %}
     </div>
@@ -49,9 +49,6 @@
         {% endif %}
       </figure>
       {% endfor %}
-      {% if is_last %}
-      <a class="btn btn--outline-marrom story__cta-btn" href="{{ url('/sobre/') }}">Conheça nossa história →</a>
-      {% endif %}
     </div>
     {% endif %}
   </div>
