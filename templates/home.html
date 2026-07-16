@@ -24,6 +24,7 @@
 {% endif %}
 
 {% for story in home.stories %}
+{% set is_last = loop.last %}
 <section class="story">
   {% if story.get('title') %}<h2 class="section-title">{{ story.title }}</h2>{% endif %}
   <div class="story__body">
@@ -31,6 +32,9 @@
       {% for p in story.paragraphs %}
       <p>{{ p }}</p>
       {% endfor %}
+      {% if is_last and not story.get('photos') %}
+      <a class="btn btn--outline-marrom story__cta-btn" href="{{ url('/sobre/') }}">Conheça nossa história →</a>
+      {% endif %}
     </div>
     {% if story.get('photos') %}
     <div class="story-photos__sidebar">
@@ -39,6 +43,9 @@
         <div class="story__photo__frame">
           <img src="{{ url(photo.src) }}" alt="{{ photo.alt }}" loading="lazy"
                onerror="this.src='{{ url('/static/img/placeholder.svg') }}'">
+          {% if is_last and loop.last %}
+          <a class="btn btn--outline-marrom story__cta-btn" href="{{ url('/sobre/') }}">Conheça nossa história →</a>
+          {% endif %}
         </div>
         {% if photo.get('caption') %}
         <figcaption class="story__caption">{{ photo.caption }}</figcaption>
@@ -50,9 +57,6 @@
   </div>
 </section>
 {% endfor %}
-<div class="story__cta">
-  <a class="btn btn--outline-marrom" href="{{ url('/sobre/') }}">Conheça nossa história →</a>
-</div>
 
 <section class="contact-cta">
   <h2>{{ home.cta_title }}</h2>
