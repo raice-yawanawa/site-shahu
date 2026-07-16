@@ -1,6 +1,7 @@
 {% set active_cat = category.slug if category is defined and category else None %}
 {% set active_sub = subcategory.slug if subcategory is defined and subcategory else None %}
 <aside class="sidebar" data-sidebar>
+  <div class="sidebar__inner">
   <nav class="sidebar__nav" aria-label="Navegação">
     <ul class="menu">
       <li class="menu__item">
@@ -45,4 +46,5 @@
       {% endfor %}
     </ul>
   </nav>
+  </div>
 </aside>
