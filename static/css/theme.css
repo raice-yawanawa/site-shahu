@@ -292,7 +292,7 @@ h1, h2, h3 { font-family: var(--fonte-titulo); color: var(--cor-marrom); line-he
 
 /* ---------------------------------------------------------------- História */
 .story { margin-bottom: 48px; }
-.story__body { display: flex; gap: 32px; align-items: flex-start; }
+.story__body { display: flex; gap: 32px; align-items: center; }
 .story__text { flex: 1; min-width: 0; }
 .story__text p { margin: 0 0 16px; font-size: 1.05rem; }
 .story-photos__sidebar {
