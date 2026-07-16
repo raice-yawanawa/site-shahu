@@ -29,9 +29,11 @@
   {% if story.get('title') %}<h2 class="section-title">{{ story.title }}</h2>{% endif %}
   <div class="story__body">
     <div class="story__text">
-      {% for p in story.paragraphs %}
-      <p>{{ p }}</p>
-      {% endfor %}
+      <div class="story__text-body">
+        {% for p in story.paragraphs %}
+        <p>{{ p }}</p>
+        {% endfor %}
+      </div>
       {% if is_last %}
       <a class="btn btn--outline-marrom story__cta-btn" href="{{ url('/sobre/') }}">Conheça nossa história →</a>
       {% endif %}

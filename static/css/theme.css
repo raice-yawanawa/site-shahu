@@ -294,6 +294,7 @@ h1, h2, h3 { font-family: var(--fonte-titulo); color: var(--cor-marrom); line-he
 .story { margin-bottom: 48px; }
 .story__body { display: flex; gap: 32px; align-items: stretch; }
 .story__text { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.story__text-body { flex: 1; display: flex; flex-direction: column; justify-content: center; }
 .story__text p { margin: 0 0 16px; font-size: 1.05rem; }
 .story-photos__sidebar {
   flex: 0 0 240px;
@@ -316,7 +317,7 @@ h1, h2, h3 { font-family: var(--fonte-titulo); color: var(--cor-marrom); line-he
   line-height: 1.4;
 }
 
-.story__cta-btn { align-self: flex-start; margin-top: auto; padding-top: 24px; }
+.story__cta-btn { align-self: flex-start; margin-top: 24px; }
 
 /* -------------------------------------------------------------- Sobre nós */
 .sobre { max-width: 760px; margin: 0 auto; }
