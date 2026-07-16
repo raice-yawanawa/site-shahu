@@ -43,15 +43,15 @@
         <div class="story__photo__frame">
           <img src="{{ url(photo.src) }}" alt="{{ photo.alt }}" loading="lazy"
                onerror="this.src='{{ url('/static/img/placeholder.svg') }}'">
-          {% if is_last and loop.last %}
-          <a class="btn btn--outline-marrom story__cta-btn" href="{{ url('/sobre/') }}">Conheça nossa história →</a>
-          {% endif %}
         </div>
         {% if photo.get('caption') %}
         <figcaption class="story__caption">{{ photo.caption }}</figcaption>
         {% endif %}
       </figure>
       {% endfor %}
+      {% if is_last %}
+      <a class="btn btn--outline-marrom story__cta-btn" href="{{ url('/sobre/') }}">Conheça nossa história →</a>
+      {% endif %}
     </div>
     {% endif %}
   </div>
