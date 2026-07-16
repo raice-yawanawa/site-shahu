@@ -32,12 +32,13 @@ class Catalog:
             if p.category == category_slug and p.subcategory == subcategory_slug
         ]
 
-    def featured(self) -> list[Product]:
-        """Peças marcadas como destaque, ordenadas por featured_order (None = fim)."""
-        return sorted(
-            [p for p in self.products if p.featured and p.available],
-            key=lambda p: (p.featured_order is None, p.featured_order or 0, p.name.casefold()),
-        )
+    def featured(self, order: list[str] | None = None) -> list[Product]:
+        """Peças marcadas como destaque, ordenadas pela lista `order` de slugs das configurações."""
+        items = [p for p in self.products if p.featured and p.available]
+        if not order:
+            return sorted(items, key=lambda p: p.name.casefold())
+        idx = {slug: i for i, slug in enumerate(order)}
+        return sorted(items, key=lambda p: (idx.get(p.slug, len(order)), p.name.casefold()))
 
     def count_in_category(self, category_slug: str) -> int:
         return sum(1 for p in self.products if p.category == category_slug)

@@ -8,7 +8,7 @@
     <h1 class="sobre__title">Nossa História</h1>
   </header>
 
-  {% for story in home.stories %}
+  {% for story in sobre.get('stories', []) %}
   <section class="story">
     {% if story.get('title') %}<h2 class="section-title">{{ story.title }}</h2>{% endif %}
     <div class="story__text">

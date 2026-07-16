@@ -78,15 +78,6 @@ collections:
           default: false,
         }
       - {
-          label: "Posição no destaque",
-          name: "featured_order",
-          widget: "number",
-          required: false,
-          value_type: "int",
-          min: 1,
-          hint: "Ordem no carrossel de destaques (1 = primeiro). Deixe vazio para sem prioridade.",
-        }
-      - {
           label: "Sob encomenda",
           name: "made_to_order",
           widget: "boolean",
@@ -99,6 +90,31 @@ collections:
   - name: "settings"
     label: "Configurações do site"
     files:
+      - name: "sobre"
+        label: "Página 'Nossa História'"
+        file: "content/sobre.yaml"
+        fields:
+          - label: "Histórias"
+            name: "stories"
+            widget: "list"
+            label_singular: "História"
+            hint: "Seções da página 'Nossa História'. Independente da página inicial."
+            fields:
+              - { label: "Título (opcional)", name: "title", widget: "string", required: false }
+              - label: "Parágrafos"
+                name: "paragraphs"
+                widget: "list"
+                label_singular: "Parágrafo"
+                field: { label: "Parágrafo", name: "paragrafo", widget: "text" }
+              - label: "Fotos (opcional)"
+                name: "photos"
+                widget: "list"
+                required: false
+                label_singular: "Foto"
+                fields:
+                  - { label: "Imagem", name: "src", widget: "image" }
+                  - { label: "Texto alternativo", name: "alt", widget: "string" }
+                  - { label: "Legenda (opcional)", name: "caption", widget: "string", required: false }
       - name: "site"
         label: "Site, contato e página inicial"
         file: "content/site.yaml"
@@ -172,6 +188,12 @@ collections:
                       - { label: "Imagem", name: "src", widget: "image" }
                       - { label: "Texto alternativo", name: "alt", widget: "string" }
                       - { label: "Legenda (opcional)", name: "caption", widget: "string", required: false, hint: "Aparece abaixo da foto em texto discreto." }
+              - label: "Ordem dos destaques"
+                name: "featured_order"
+                widget: "list"
+                required: false
+                label_singular: "Peça"
+                hint: "Slugs das peças em destaque, na ordem desejada (ex.: colar-verde). Peças com 'Destaque' ativado mas não listadas aqui aparecem ao final em ordem alfabética."
               - {
                   label: "Título dos destaques",
                   name: "featured_title",

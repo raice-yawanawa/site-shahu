@@ -36,6 +36,10 @@ class Paths:
         return self.content / "categories.yaml"
 
     @property
+    def sobre_file(self) -> Path:
+        return self.content / "sobre.yaml"
+
+    @property
     def templates(self) -> Path:
         return self.root / "templates"
 

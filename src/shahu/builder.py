@@ -12,6 +12,8 @@ from __future__ import annotations
 import shutil
 from pathlib import Path
 
+import yaml
+
 from shahu.catalog import Catalog, load_categories, load_products, load_site_content
 from shahu.config import PATHS, Paths
 from shahu.content_pages import home_context
@@ -52,7 +54,8 @@ def build(paths: Paths = PATHS) -> Path:
     _write_page(output, "/", renderer.render("home.html", **home_context(site, catalog)))
 
     # --- Sobre ---
-    _write_page(output, "/sobre/", renderer.render("sobre.html", home=site.home))
+    sobre = yaml.safe_load(paths.sobre_file.read_text(encoding="utf-8")) or {}
+    _write_page(output, "/sobre/", renderer.render("sobre.html", sobre=sobre))
 
     # --- Coleções: uma página por categoria e por subcategoria ---
     for category in categories:

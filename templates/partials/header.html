@@ -7,7 +7,10 @@
   <a class="header__brand" href="{{ url('/') }}">
     <img class="header__logo" src="{{ url(site.logo) }}" alt="{{ site.brand_name }}">
     <span class="header__brand-text">
-      <strong>{{ site.brand_name }}</strong>
+      <strong>
+        <span class="header__brand-full">{{ site.brand_name }}</span>
+        <span class="header__brand-short">{{ site.brand_name.split()[0] }}</span>
+      </strong>
       <em>{{ site.tagline }}</em>
     </span>
   </a>

@@ -76,11 +76,12 @@
       {{ product.description_html | safe }}
     </div>
 
-    {% if product.made_to_order %}
-    <p class="product__made-to-order">*Peça apenas sob encomenda, verificar políticas e condições para adquirir este produto</p>
-    {% endif %}
-
-    <p class="product__handmade">✿ Peça feita à mão — pequenas variações são naturais e tornam cada peça única.</p>
+    <div class="product__notices">
+      {% if product.made_to_order %}
+      <p class="product__made-to-order">*Sob encomenda — verifique políticas e condições de aquisição.</p>
+      {% endif %}
+      <p class="product__handmade">✿ Peça feita à mão — pequenas variações são naturais e tornam cada peça única.</p>
+    </div>
   </div>
 </article>
 {% endblock %}

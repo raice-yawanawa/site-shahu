@@ -26,7 +26,6 @@ class Product:
     available: bool = True
     featured: bool = False
     made_to_order: bool = False  # "sob encomenda"
-    featured_order: int | None = None  # posição no carrossel de destaque (1 = primeiro)
 
     @property
     def url(self) -> str:
