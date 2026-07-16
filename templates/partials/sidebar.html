@@ -1,8 +1,24 @@
 {% set active_cat = category.slug if category is defined and category else None %}
 {% set active_sub = subcategory.slug if subcategory is defined and subcategory else None %}
 <aside class="sidebar" data-sidebar>
-  <nav class="sidebar__nav" aria-label="Categorias">
+  <nav class="sidebar__nav" aria-label="Navegação">
     <ul class="menu">
+      <li class="menu__item">
+        <a class="menu__link" href="{{ url('/') }}">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" style="flex-shrink:0">
+            <path fill="currentColor" d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+          </svg>
+          Início
+        </a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link" href="{{ url('/sobre/') }}">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" style="flex-shrink:0">
+            <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+          </svg>
+          Nossa História
+        </a>
+      </li>
       {% for c in categories %}
       <li class="menu__item">
         <details class="menu__group" {% if active_cat == c.slug %}open{% endif %}>

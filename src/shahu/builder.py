@@ -51,6 +51,9 @@ def build(paths: Paths = PATHS) -> Path:
     # --- Home ---
     _write_page(output, "/", renderer.render("home.html", **home_context(site, catalog)))
 
+    # --- Sobre ---
+    _write_page(output, "/sobre/", renderer.render("sobre.html", home=site.home))
+
     # --- Coleções: uma página por categoria e por subcategoria ---
     for category in categories:
         _write_page(

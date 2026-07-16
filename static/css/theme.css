@@ -15,9 +15,8 @@
   --cor-rosa: #e8b5b0;
   --cor-whatsapp: #25d366;
   --cor-whatsapp-escuro: #1da851;
-  --cor-whatsapp-pastel: #a9e5c0; /* verde oficial do WhatsApp em tom pastel */
-  /* Degradê oficial do Instagram (amarelo -> laranja -> rosa -> roxo -> azul) em tons pastéis */
-  --gradiente-instagram-pastel: linear-gradient(45deg, #fce3a8 0%, #f5b78e 25%, #e79cc0 55%, #c9a9e4 80%, #a6b4ec 100%);
+  --cor-whatsapp-pastel: #3EB87A;
+  --gradiente-instagram-pastel: linear-gradient(45deg, #f9c038 0%, #ed7040 25%, #c8407a 55%, #8855c8 80%, #4878d8 100%);
 
   --branco: #fffaf3;
   --sombra: 0 6px 20px rgba(59, 36, 25, 0.12);
@@ -188,6 +187,14 @@ h1, h2, h3 { font-family: var(--fonte-titulo); color: var(--cor-marrom); line-he
   font-weight: 600;
 }
 .submenu__link--all { font-style: italic; color: var(--cor-terracota-escuro); }
+.menu__link {
+  display: flex; align-items: center; gap: 8px;
+  padding: 12px 8px;
+  font-family: var(--fonte-titulo); font-size: 1.25rem;
+  color: var(--cor-marrom);
+  border-bottom: 1px solid rgba(59,36,25,0.1);
+}
+.menu__link:hover { text-decoration: none; color: var(--cor-terracota); }
 
 /* --------------------------------------------------------------- Botões */
 .btn {
@@ -215,10 +222,12 @@ h1, h2, h3 { font-family: var(--fonte-titulo); color: var(--cor-marrom); line-he
 .btn--whatsapp { background: var(--cor-whatsapp); color: #fff; }
 .btn--whatsapp:hover { background: var(--cor-whatsapp-escuro); }
 /* Variantes pastel (mesmo padrão dos ícones do cabeçalho): sem borda nem contorno */
-.btn--whatsapp-pastel { background: var(--cor-whatsapp-pastel); color: var(--cor-marrom); border: none; }
-.btn--instagram-pastel { background: var(--gradiente-instagram-pastel); color: var(--cor-marrom); border: none; }
+.btn--whatsapp-pastel { background: var(--cor-whatsapp-pastel); color: #fff; border: none; }
+.btn--instagram-pastel { background: var(--gradiente-instagram-pastel); color: #fff; border: none; }
 .btn--whatsapp-pastel:hover, .btn--instagram-pastel:hover { filter: brightness(0.94); }
 .btn--whatsapp-pastel:focus-visible, .btn--instagram-pastel:focus-visible { outline: none; }
+.btn--outline-marrom { border-color: var(--cor-marrom); color: var(--cor-marrom); background: transparent; }
+.btn--outline-marrom:hover { background: var(--cor-marrom); color: var(--branco); }
 .btn--disabled { background: rgba(59, 36, 25, 0.12); color: var(--cor-marrom-suave); cursor: not-allowed; }
 
 /* ---------------------------------------------------------------- Títulos */
@@ -253,12 +262,20 @@ h1, h2, h3 { font-family: var(--fonte-titulo); color: var(--cor-marrom); line-he
   background-size: cover; background-position: center;
   opacity: 1;
 }
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.40) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 1;
+}
 .hero__inner {
   position: relative;
+  z-index: 2;
   text-align: center;
   padding: clamp(40px, 8vw, 88px) 20px;
   color: var(--branco);
-  /* degradê horizontal em marca d'água: imagem mostra nas bordas, vela suave no centro destacando título */
   background: linear-gradient(
     to right,
     rgba(59, 36, 25, 0.06) 0%,
@@ -295,6 +312,13 @@ h1, h2, h3 { font-family: var(--fonte-titulo); color: var(--cor-marrom); line-he
   text-align: left;
   line-height: 1.4;
 }
+
+.story__cta { margin: -16px 0 48px; }
+
+/* -------------------------------------------------------------- Sobre nós */
+.sobre { max-width: 760px; margin: 0 auto; }
+.sobre__header { text-align: center; margin-bottom: 48px; padding-bottom: 24px; border-bottom: 1px solid rgba(59,36,25,0.1); }
+.sobre__title { font-size: clamp(2rem, 5vw, 3rem); margin: 0; }
 
 /* ------------------------------------------------------------------ Grid */
 .featured { margin-bottom: 56px; }
@@ -513,7 +537,7 @@ h1, h2, h3 { font-family: var(--fonte-titulo); color: var(--cor-marrom); line-he
 @media (max-width: 860px) {
   .header__menu { display: flex; }
   .header__brand { margin-left: 0; }
-  .header__brand-text em { display: none; }
+  .header__brand-text { display: none; }
 
   .sidebar {
     position: fixed;

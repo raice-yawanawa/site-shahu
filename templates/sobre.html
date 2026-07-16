@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Nossa História — {{ site.brand_name }}{% endblock %}
+{% block description %}Conheça a história da {{ site.brand_name }} e das artesãs Yawanawá por trás de cada peça.{% endblock %}
+
+{% block content %}
+<div class="sobre">
+  <header class="sobre__header">
+    <h1 class="sobre__title">Nossa História</h1>
+  </header>
+
+  {% for story in home.stories %}
+  <section class="story">
+    {% if story.get('title') %}<h2 class="section-title">{{ story.title }}</h2>{% endif %}
+    <div class="story__text">
+      {% for p in story.paragraphs %}
+      <p>{{ p }}</p>
+      {% endfor %}
+    </div>
+    {% if story.get('photos') %}
+    <div class="story-photos__grid">
+      {% for photo in story.photos %}
+      <figure class="story__photo">
+        <div class="story__photo__frame">
+          <img src="{{ url(photo.src) }}" alt="{{ photo.alt }}" loading="lazy"
+               onerror="this.src='{{ url('/static/img/placeholder.svg') }}'">
+        </div>
+        {% if photo.get('caption') %}
+        <figcaption class="story__caption">{{ photo.caption }}</figcaption>
+        {% endif %}
+      </figure>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </section>
+  {% endfor %}
+</div>
+{% endblock %}

@@ -12,6 +12,17 @@
   </div>
 </section>
 
+{% if featured_products %}
+<section class="featured">
+  <h2 class="section-title">{{ home.featured_title }}</h2>
+  <div class="carousel">
+    {% for product in featured_products %}
+      {% include "partials/product_card.html" %}
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
 {% for story in home.stories %}
 <section class="story">
   {% if story.get('title') %}<h2 class="section-title">{{ story.title }}</h2>{% endif %}
@@ -37,17 +48,9 @@
   {% endif %}
 </section>
 {% endfor %}
-
-{% if featured_products %}
-<section class="featured">
-  <h2 class="section-title">{{ home.featured_title }}</h2>
-  <div class="carousel">
-    {% for product in featured_products %}
-      {% include "partials/product_card.html" %}
-    {% endfor %}
-  </div>
-</section>
-{% endif %}
+<div class="story__cta">
+  <a class="btn btn--outline-marrom" href="{{ url('/sobre/') }}">Conheça nossa história →</a>
+</div>
 
 <section class="contact-cta">
   <h2>{{ home.cta_title }}</h2>
