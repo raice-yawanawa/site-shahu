@@ -54,7 +54,11 @@ def build(paths: Paths = PATHS) -> Path:
     _write_page(output, "/", renderer.render("home.html", **home_context(site, catalog)))
 
     # --- Sobre ---
-    sobre = yaml.safe_load(paths.sobre_file.read_text(encoding="utf-8")) or {}
+    sobre = (
+        yaml.safe_load(paths.sobre_file.read_text(encoding="utf-8")) or {}
+        if paths.sobre_file.exists()
+        else {}
+    )
     _write_page(output, "/sobre/", renderer.render("sobre.html", sobre=sobre))
 
     # --- Coleções: uma página por categoria e por subcategoria ---

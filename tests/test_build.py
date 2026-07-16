@@ -53,6 +53,17 @@ def _make_project(tmp_path):
         encoding="utf-8",
     )
 
+    (root / "content" / "sobre.yaml").write_text(
+        textwrap.dedent(
+            """
+            stories:
+              - title: "Nossa história"
+                paragraphs: ["Texto de teste."]
+                photos: []
+            """
+        ),
+        encoding="utf-8",
+    )
     (root / "humans.txt").write_text("Desenvolvedora: Dev Teste\n", encoding="utf-8")
 
     shutil.copytree(PROJECT_ROOT / "templates", root / "templates")
@@ -67,14 +78,15 @@ def test_build_gera_paginas(tmp_path):
     assert (out / "colecao" / "joias" / "index.html").exists()
     assert (out / "colecao" / "joias" / "colares" / "index.html").exists()
     assert (out / "produto" / "colar-a" / "index.html").exists()
+    assert (out / "sobre" / "index.html").exists()
 
     produto = (out / "produto" / "colar-a" / "index.html").read_text(encoding="utf-8")
     assert "Colar A" in produto
     assert "R$ 100,00" in produto
     assert "data-add-to-cart" in produto
-    # peça sob encomenda: atributo no botão e aviso automático na descrição
+    # peça sob encomenda: atributo no botão e aviso discreto na descrição
     assert 'data-made-to-order="true"' in produto
-    assert "apenas sob encomenda" in produto
+    assert "Sob encomenda" in produto
 
     home = (out / "index.html").read_text(encoding="utf-8")
     assert "SHAHU RAUTIHU KENEYA" in home
