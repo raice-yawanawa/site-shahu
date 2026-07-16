@@ -11,42 +11,21 @@ home:
   hero_subtitle: Cada peça carrega a identidade e os grafismos do meu povo Yawanawá.
   hero_image: /assets/images/brand/hero.jpg
   stories:
-    - title: A história da SHAHU
+    - title: SHAHU RAUTIHU KENEYA
       paragraphs:
-        - |-
-          A SHAHU RAUTIHU KENEYA é uma marca criada para valorizar, preservar e compartilhar a riqueza da cultura do povo Yawanawá por meio do artesanato tradicional.
-          Seu nome reúne três palavras da língua Yawanawá que expressam a essência da marca: SHAHU significa mulher, RAUTIHU significa artesanato e KENEYA significa grafismo ou desenho do povo Yawanawá. Juntas, elas representam a força das mulheres indígenas, a arte ancestral e os grafismos que carregam a identidade cultural do povo Yawanawá.
-        - 'Cada peça é produzida com respeito aos conhecimentos transmitidos pelos ancestrais e às técnicas preservadas pela família das artesãs. Os colares, pulseiras, brincos e demais criações não são apenas adornos: são expressões de uma história, de um modo de viver e de uma cultura que permanece viva por meio de seus símbolos, cores e grafismos.'
-        - A SHAHU RAUTIHU KENEYA nasce do encontro entre a tradição e o presente, conectando a aldeia e a cidade para levar ao mundo o artesanato Yawanawá de forma autêntica, valorizando o trabalho das mulheres indígenas e fortalecendo a continuidade dos saberes ancestrais.
+        - Raice Rodrigues Yawanawá e Shane Tsaka Rodrigues Brasil Yawanawá são jovens artesãs do povo Yawanawá e idealizadoras da marca. Carregam consigo o conhecimento ancestral, mantendo viva através desse trabalho uma tradição familiar profundamente ligada à cultura Yawanawá.
       photos:
-        - src: /assets/images/brand/Foto Ponte.jpg
-          alt: Povo Yawanawá atravessando ponte do Rio Gregório
-          caption: Povo Yawanawá atravessando ponte do Rio Gregório
-    - title: Sobre as artesãs
-      paragraphs:
-        - Raice Rodrigues Yawanawá e Shane Tsaka Rodrigues Brasil Yawanawá são jovens artesãs do povo Yawanawá que carregam consigo um conhecimento ancestral transmitido de geração em geração. A arte do artesanato foi aprendida com sua mãe, que, por sua vez, herdou esse saber de sua avó, mantendo viva uma tradição familiar profundamente ligada à cultura Yawanawá.
-        - |-
-          Embora vivam em contextos diferentes, as duas compartilham o mesmo propósito. Raice vive em contexto urbano, onde busca ampliar seus conhecimentos e fortalecer a valorização da cultura indígena por meio do artesanato. Já Shane Tsaka vive na aldeia, mantendo uma relação cotidiana com o território, a natureza e os ensinamentos tradicionais do povo Yawanawá.
-          Essa união entre a cidade e a aldeia dá identidade à SHAHU RAUTIHU KENEYA, marca criada para valorizar o artesanato, os grafismos e os saberes do povo Yawanawá.
-        - Cada peça reflete a riqueza da cultura, da ancestralidade e da história do povo Yawanawá. Mais do que adornos, suas criações expressam identidade, memória e o compromisso de preservar e compartilhar uma tradição que continua viva por meio das mãos de duas jovens artesãs Yawanawá.
-      photos:
-        - src: /assets/images/brand/Raice na Aldeia.png
-          alt: Raice (gestora da SHAHU) ornamentada na aldeia Yawanawá
-          caption: Raice (gestora da SHAHU)
         - src: /assets/images/brand/Foto Artesãs.jpg
           alt: Raice e Shane Tsaka (imãs e sócias da SHAHU)
           caption: Raice e Shane Tsaka
-        - src: /assets/images/brand/Shane Tsaka na aldeia.png
-          alt: Shane Tsaka (sócia da SHAHU) ornamentada na aldeia Yawanawá
-          caption: Shane Tsaka (sócia da SHAHU)
     - title: ''
       paragraphs:
-        - 'Este projeto é um trabalho voluntário de fomento: cada compra valoriza e reconhece o artesanato identitário como meio de subisistência digno e, principalmente, fortalece a preservação da cultura Yawanawá.'
+        - 'Este projeto é um trabalho voluntário de fomento: cada compra valoriza e legitima o artesanato identitário como meio de subisistência digno e, principalmente, fortalece a preservação da cultura Yawanawá.'
       photos: []
   featured_order: []
   featured_title: Peças em destaque
   cta_title: Fale comigo
   cta_text: Tem interesse em uma peça ou quer uma encomenda especial? Me chame!
 credits:
-  developer: Camila Cerreti
   developer_url: https://www.linkedin.com/in/camilacc/
+  developer: Camila Cerreti
