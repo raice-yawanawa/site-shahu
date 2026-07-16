@@ -382,10 +382,11 @@ h1, h2, h3 { font-family: var(--fonte-titulo); color: var(--cor-marrom); line-he
 .empty-state { text-align: center; padding: 60px 20px; background: var(--branco); border-radius: var(--raio); }
 
 /* ------------------------------------------------------------- Produto */
-.product { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: start; }
+.product { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: stretch; }
 
 /* ---- Galeria carrossel ---- */
 .product__gallery { display: flex; flex-direction: column; gap: 10px; }
+.gallery__main { flex: 1; }
 
 .gallery__main {
   position: relative;
