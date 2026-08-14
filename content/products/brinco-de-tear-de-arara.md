@@ -1,5 +1,5 @@
 ---
-name: Brinco de Tear de Arara
+name: Brinco Tear de Arara
 price: 250
 category: joias
 subcategory: brincos
@@ -13,3 +13,5 @@ made_to_order: false
 ---
 
 Brinco de Arara feito no tear com micro miçangas
+
+Tamanho aproximado: 13cm.
