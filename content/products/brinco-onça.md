@@ -15,3 +15,5 @@ made_to_order: true
 Brinco de tear com a imagem da onça, com miçangas pequenas.
 
 O olhar que representa a força da natureza.
+
+tamanho aproximado 15cm.
