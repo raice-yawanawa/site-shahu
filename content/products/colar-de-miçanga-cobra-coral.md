@@ -11,4 +11,4 @@ featured: false
 made_to_order: true
 ---
 
-Colar de miçanga em rede com as cores da cobra coral.
+Colar de miçanga em ponto rede com as cores da cobra coral.
