@@ -1,6 +1,6 @@
 ---
 name: Brinco Mulher Indígena
-price: 300
+price: 350
 category: joias
 subcategory: brincos
 images:
@@ -13,3 +13,5 @@ made_to_order: true
 ---
 
 Brinco em tear com imagem da mulher indígena, representando o olhar da força indígena feminina.
+
+Tamanho aproximado 20cm.
