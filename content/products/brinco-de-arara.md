@@ -9,8 +9,10 @@ images:
   - /assets/images/products/pasted-image-1783442106108.png
 available: true
 featured: true
-featured_order: 2
 made_to_order: true
+featured_order: 2
 ---
 
-Brinco de miçanga que trás a beleza das araras amazônicas
+Brinco de miçanga que trás a beleza das araras amazônicas.
+
+Tamanho aproximado: 20cm
