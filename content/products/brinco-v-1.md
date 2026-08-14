@@ -10,6 +10,6 @@ featured: false
 made_to_order: true
 ---
 
-Brinco em formato V.
+Brinco em formato V, com micro miçangas.
 
 Tamanho aproximado: 6cm.
