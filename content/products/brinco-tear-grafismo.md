@@ -1,6 +1,6 @@
 ---
 name: Brinco Tear Grafismo
-price: 250
+price: 300
 category: joias
 subcategory: brincos
 images:
@@ -12,4 +12,6 @@ featured: false
 made_to_order: true
 ---
 
-Brinco em tear com grafismo indígenas, com miçangas pequenas.
+Brinco em tear com grafismo da Runua (Jibóia), com micro miçangas.
+
+Tamanho aproximado 15cm.
