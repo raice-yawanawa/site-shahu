@@ -11,3 +11,5 @@ made_to_order: false
 ---
 
 Brinco de pena longo.
+
+Tamanho aproximado: 25cm.
