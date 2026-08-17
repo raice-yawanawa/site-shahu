@@ -10,6 +10,6 @@ featured: false
 made_to_order: true
 ---
 
-Bricno em micro mçanga com a imagem do grafismo Yawanawa, com cores vibrantes e em degrade.
+Brinco em micro miçanga com a imagem do grafismo Yawanawa, com cores vibrantes e em degrade.
 
 Tamanho aproximado: 17cm.
