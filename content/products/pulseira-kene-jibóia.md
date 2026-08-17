@@ -1,5 +1,5 @@
 ---
-name: Pulseira Kene Jibóia
+name: Pulseira Kene Jiboia
 price: 350
 category: joias
 subcategory: pulseiras
@@ -10,4 +10,4 @@ featured: false
 made_to_order: true
 ---
 
-Pulseira com micro miçangas com o grafismo da Jibóia.
+Pulseira com micro miçangas com o grafismo da Jiboia.
