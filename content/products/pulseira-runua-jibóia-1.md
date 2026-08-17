@@ -1,5 +1,5 @@
 ---
-name: Pulseira Runua (Jibóia)
+name: Pulseira Runua (Jiboia)
 price: 250
 category: joias
 subcategory: pulseiras
@@ -11,4 +11,4 @@ featured: false
 made_to_order: true
 ---
 
-Pulseira com miçanga /9 com o grafismo da Runua (Jibóia), trazendo o proteção, força e sabedoria.
+Pulseira com miçanga /9 com o grafismo da Runua (Jiboia), trazendo o proteção, força e sabedoria.
