@@ -11,4 +11,4 @@ featured: false
 made_to_order: true
 ---
 
-Pulseira em micro miçanga com a imagem da Runua (Jibóia), que traz o significado de proteção, poder e sabedoria.
+Pulseira em micro miçanga com a imagem da Runua (Jiboia), que traz o significado de proteção, poder e sabedoria.
