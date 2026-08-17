@@ -13,4 +13,4 @@ featured: false
 made_to_order: true
 ---
 
-Pulseira com miçangas /9 com o grafismo da Runua Mapu (Cabeça da Jibóia), que para o povo Yawanawa representa proteção, força e sabedoria.
+Pulseira com miçangas /9 com o grafismo da Runua Mapu (Cabeça da Jiboia), que para o povo Yawanawa representa proteção, força e sabedoria.
