@@ -1,5 +1,5 @@
 ---
-name: Pulseira Runua (Jibóia)
+name: Pulseira Runua (Jiboia)
 price: 250
 category: joias
 subcategory: pulseiras
@@ -10,4 +10,4 @@ featured: false
 made_to_order: true
 ---
 
-Pulseira com o grafismo da Runua (Jibóia), que para o povo Yawanawa representa proteção, força e sabedoria.
+Pulseira com o grafismo da Runua (Jiboia), que para o povo Yawanawa representa proteção, força e sabedoria.
