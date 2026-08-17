@@ -1,6 +1,6 @@
 ---
 name: Brinco Runua
-price: null
+price: 150
 category: joias
 subcategory: brincos
 images:
