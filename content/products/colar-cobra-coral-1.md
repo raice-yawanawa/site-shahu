@@ -1,6 +1,6 @@
 ---
 name: Colar Cobra Coral
-price: 200
+price: 120
 category: joias
 subcategory: colares
 images:
