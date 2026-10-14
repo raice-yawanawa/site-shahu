@@ -1,6 +1,6 @@
 ---
 name: Cordão V
-price: 250
+price: 200
 category: joias
 subcategory: colares
 images:
