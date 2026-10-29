@@ -1,6 +1,6 @@
 ---
 name: Colar Japó
-price: 400
+price: 500
 category: joias
 subcategory: colares
 images:
