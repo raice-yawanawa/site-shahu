@@ -1,6 +1,6 @@
 ---
 name: Colar Japó
-price: 500
+price: 400
 category: joias
 subcategory: colares
 images:
@@ -8,8 +8,8 @@ images:
   - /assets/images/products/IMG_4712.jpg
 available: true
 featured: true
-featured_order: 1
 made_to_order: true
+featured_order: 1
 ---
 
 Colar inspirado no Pássaro Japó.
