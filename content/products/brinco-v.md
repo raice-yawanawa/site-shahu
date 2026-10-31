@@ -1,6 +1,6 @@
 ---
 name: Brinco V
-price: 80
+price: 50
 category: joias
 subcategory: brincos
 images:
