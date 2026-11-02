@@ -5,7 +5,7 @@ brand:
   logo: /assets/images/logo/logo-shahu.jpeg
 contact:
   whatsapp: '5568992554710'
-  instagram: raissa_yawanawa
+  instagram: shahu.rautihu.keneya
 home:
   hero_title: Arte indígena feita à mão
   hero_subtitle: Cada peça carrega a identidade e os grafismos do meu povo Yawanawá.
@@ -25,5 +25,5 @@ home:
   cta_title: Fale comigo
   cta_text: Tem interesse em uma peça ou quer uma encomenda especial? Me chame!
 credits:
-  developer_url: https://www.linkedin.com/in/camilacc/
   developer: Camila Cerreti
+  developer_url: https://www.linkedin.com/in/camilacc/
