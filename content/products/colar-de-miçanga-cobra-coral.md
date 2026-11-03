@@ -1,5 +1,5 @@
 ---
-name: Colar de Miçanga - Cobra Coral
+name: Colar de Miçanga  ponto rede
 price: 150
 category: joias
 subcategory: colares
@@ -13,4 +13,4 @@ featured: false
 made_to_order: true
 ---
 
-Colar de miçanga em ponto rede com as cores da cobra coral.
+Colar de miçanga em ponto rede disponíveis em diversas cores
