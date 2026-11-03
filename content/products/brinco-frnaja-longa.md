@@ -1,5 +1,5 @@
 ---
-name: Brinco Frnaja Longa
+name: Brinco Franja Longa
 price: 120
 category: joias
 subcategory: brincos
