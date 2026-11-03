@@ -1,5 +1,5 @@
 ---
-name: Colar da runua mapu (Cabeça da cobra
+name: Colar da runua mapu (Cabeça da cobra)
 price: 150
 category: joias
 subcategory: colares
@@ -7,8 +7,8 @@ images:
   - /assets/images/products/pasted-image-1793488024809.png
   - /assets/images/products/pasted-image-1793488066053.png
   - /assets/images/products/pasted-image-1793488077167.png
-  - /assets/images/products/pasted-image-1793488210381.png
   - /assets/images/products/pasted-image-1793488217278.png
+  - /assets/images/products/pasted-image-1793680747807.png
 available: true
 featured: true
 made_to_order: true
