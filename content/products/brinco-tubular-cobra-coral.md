@@ -1,5 +1,5 @@
 ---
-name: Brinco Tubular Cobra Coral
+name: Brincos Tubulares
 price: 180
 category: joias
 subcategory: brincos
@@ -13,6 +13,6 @@ featured: false
 made_to_order: true
 ---
 
-Brinco tubular em micro miçanga com o grafismo da Cobra Coral.
+Brincos tubulares em micro miçangas disponíveis e várias cores a preferência do cliente 
 
 Tamanho aproximado: 17cm.
