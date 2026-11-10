@@ -4,10 +4,9 @@ price: 250
 category: joias
 subcategory: brincos
 images:
-  - /assets/images/products/pasted-image-1793681330739.png
-  - /assets/images/products/pasted-image-1793681338626.png
-  - /assets/images/products/pasted-image-1793681345010.png
-  - /assets/images/products/pasted-image-1793681352473.png
+  - /assets/images/products/pasted-image-1794327183828.png
+  - /assets/images/products/pasted-image-1794327189779.png
+  - /assets/images/products/pasted-image-1794327195585.png
 available: true
 featured: true
 made_to_order: true
