@@ -4,8 +4,8 @@ price: 50
 category: joias
 subcategory: aneis
 images:
-  - /assets/images/products/pasted-image-1793485768128.png
   - /assets/images/products/pasted-image-1793485775678.png
+  - /assets/images/products/pasted-image-1794327005142.png
 available: true
 featured: true
 made_to_order: true
