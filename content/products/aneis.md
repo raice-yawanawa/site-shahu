@@ -1,9 +1,10 @@
 ---
-name: Aneis
+name: Aneis azuis
 price: 50
 category: joias
 subcategory: aneis
 images:
+  - /assets/images/products/pasted-image-1794362770536.png
   - /assets/images/products/pasted-image-1793485146101.png
   - /assets/images/products/pasted-image-1793485152737.png
 available: true
